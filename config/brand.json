@@ -1,0 +1,40 @@
+{
+  "account": {
+    "handle": "@truehomes.realty",
+    "display_name": "Jeyashree Haridoss",
+    "pronouns": "she/her",
+    "title": "Real Estate Agent",
+    "business": "True Homes Realty",
+    "brokerage": "eXp Realty",
+    "disclosure_line": "True Homes Realty · Brokered by eXp Realty",
+    "market": "Triangle, North Carolina",
+    "website": "TrueHomesRealty.com"
+  },
+  "colors": {
+    "blush":  { "hex": "#E1CCBE", "use": "primary ground" },
+    "brick":  { "hex": "#7B2F2F", "use": "accent, underlines, CTA" },
+    "black":  { "hex": "#000000", "use": "headline type on blush" },
+    "white":  { "hex": "#FFFFFF", "use": "reversed type on brick" }
+  },
+  "type": {
+    "display": { "family": "Playfair Display", "source": "Google Fonts", "note": "closest free match to the serif on her signage" },
+    "body":    { "family": "Source Sans 3",   "source": "Google Fonts", "note": "humanist sans matching the sign detail type" }
+  },
+  "output_sizes": {
+    "carousel_ig": [1080, 1350],
+    "carousel_tiktok": [1080, 1920],
+    "story": [1080, 1920]
+  },
+  "assets": {
+    "headshot": "cut-out, available in brand/for-sale-template.png",
+    "skyline": "Raleigh silhouette, brand/for-sale-template.png",
+    "floral_mark": "brand/for-sale-template.png",
+    "brick_swash": "two-line underline device, brand/under-contract-template.png"
+  },
+  "hard_rules": {
+    "fair_housing": "Never describe who a home or neighborhood is FOR. No 'perfect for families', no 'safe', no school-quality claims. Amenities and distances only.",
+    "attribution": "Every generated asset carries the disclosure_line.",
+    "property_claims": "No price, sqft, status, or days-on-market unless supplied by the user. Never web-searched.",
+    "client_privacy": "No client messages, names, or transaction detail without written permission."
+  }
+}

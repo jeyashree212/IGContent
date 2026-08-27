@@ -1,0 +1,506 @@
+<title>True Homes Content System</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Source+Sans+3:ital,wght@0,300;0,400;0,600;1,400&family=JetBrains+Mono:wght@400;600&display=swap">
+
+<style>
+  :root{
+    --ground:#FAF6F2;
+    --surface:#FFFFFF;
+    --sand:#E1CCBE;
+    --sand-soft:#F0E4DA;
+    --brick:#7B2F2F;
+    --brick-lift:#96413F;
+    --ink:#1C1512;
+    --body:#4A3E38;
+    --muted:#7D6E66;
+    --rule:#DFD2C8;
+    --rule-strong:#C9B6A9;
+    --keep:#3E6B52;
+    --keep-bg:#E7F0E9;
+    --adapt:#8A6420;
+    --adapt-bg:#F6EBD8;
+    --cut:#A03D34;
+    --cut-bg:#F7E3E0;
+    --shadow:rgba(60,38,28,.10);
+
+    --f-display:"Playfair Display",Georgia,"Times New Roman",serif;
+    --f-body:"Source Sans 3","Helvetica Neue",Arial,sans-serif;
+    --f-mono:"JetBrains Mono",ui-monospace,"SFMono-Regular",Menlo,monospace;
+  }
+  @media (prefers-color-scheme:dark){
+    :root:not([data-theme="light"]){
+      --ground:#171110;
+      --surface:#201817;
+      --sand:#3A2C25;
+      --sand-soft:#2A201C;
+      --brick:#D08A7E;
+      --brick-lift:#E2A093;
+      --ink:#F4EAE3;
+      --body:#D6C6BC;
+      --muted:#A08D82;
+      --rule:#3A2C26;
+      --rule-strong:#4E3B33;
+      --keep:#8FC5A2;
+      --keep-bg:#22322A;
+      --adapt:#DCB068;
+      --adapt-bg:#332818;
+      --cut:#E39187;
+      --cut-bg:#3A2320;
+      --shadow:rgba(0,0,0,.4);
+    }
+  }
+  :root[data-theme="dark"]{
+    --ground:#171110;
+    --surface:#201817;
+    --sand:#3A2C25;
+    --sand-soft:#2A201C;
+    --brick:#D08A7E;
+    --brick-lift:#E2A093;
+    --ink:#F4EAE3;
+    --body:#D6C6BC;
+    --muted:#A08D82;
+    --rule:#3A2C26;
+    --rule-strong:#4E3B33;
+    --keep:#8FC5A2;
+    --keep-bg:#22322A;
+    --adapt:#DCB068;
+    --adapt-bg:#332818;
+    --cut:#E39187;
+    --cut-bg:#3A2320;
+    --shadow:rgba(0,0,0,.4);
+  }
+
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    background:var(--ground);
+    color:var(--body);
+    font-family:var(--f-body);
+    font-size:17px;
+    line-height:1.62;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:820px;margin:0 auto;padding:0 28px 96px}
+
+  /* ---------- masthead ---------- */
+  .mast{
+    border-bottom:2px solid var(--ink);
+    padding:56px 0 22px;
+    margin-bottom:40px;
+  }
+  .eyebrow{
+    font-family:var(--f-mono);
+    font-size:11px;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    color:var(--brick);
+    margin:0 0 18px;
+  }
+  h1{
+    font-family:var(--f-display);
+    font-weight:700;
+    font-size:clamp(2.5rem,7vw,3.9rem);
+    line-height:1.02;
+    letter-spacing:-.015em;
+    color:var(--ink);
+    margin:0 0 16px;
+    text-wrap:balance;
+  }
+  .standfirst{
+    font-size:1.14rem;
+    color:var(--body);
+    margin:0;
+    max-width:60ch;
+  }
+  .meta{
+    display:flex;flex-wrap:wrap;gap:8px 26px;
+    margin-top:24px;
+    font-family:var(--f-mono);
+    font-size:11.5px;
+    letter-spacing:.06em;
+    color:var(--muted);
+    text-transform:uppercase;
+  }
+  .meta b{color:var(--ink);font-weight:600}
+
+  /* ---------- sections ---------- */
+  section{margin-top:64px}
+  h2{
+    font-family:var(--f-display);
+    font-weight:700;
+    font-size:1.85rem;
+    line-height:1.15;
+    color:var(--ink);
+    margin:0 0 6px;
+    letter-spacing:-.01em;
+    text-wrap:balance;
+  }
+  .dek{color:var(--muted);margin:0 0 28px;max-width:62ch;font-size:1rem}
+  h3{
+    font-family:var(--f-body);
+    font-weight:600;
+    font-size:1.02rem;
+    color:var(--ink);
+    margin:34px 0 8px;
+    letter-spacing:.005em;
+  }
+  p{margin:0 0 16px;max-width:66ch}
+  a{color:var(--brick);text-decoration:underline;text-underline-offset:2px;text-decoration-thickness:1px}
+  a:hover{color:var(--brick-lift)}
+  a:focus-visible,summary:focus-visible{outline:2px solid var(--brick);outline-offset:3px}
+  strong{color:var(--ink);font-weight:600}
+  code{
+    font-family:var(--f-mono);font-size:.86em;
+    background:var(--sand-soft);color:var(--ink);
+    padding:1px 5px;border-radius:2px;
+  }
+
+  /* ---------- verdict ledger ---------- */
+  .ledger{border-top:1px solid var(--rule-strong)}
+  .row{
+    display:grid;
+    grid-template-columns:1fr auto;
+    gap:6px 20px;
+    padding:20px 0 19px;
+    border-bottom:1px solid var(--rule);
+    align-items:baseline;
+  }
+  .row .name{
+    font-family:var(--f-mono);
+    font-size:.94rem;
+    font-weight:600;
+    color:var(--ink);
+    letter-spacing:-.01em;
+    word-break:break-word;
+  }
+  .row .why{grid-column:1 / -1;margin:0;color:var(--body);font-size:.97rem;max-width:64ch}
+  .chip{
+    font-family:var(--f-body);
+    font-size:10.5px;font-weight:600;
+    letter-spacing:.13em;text-transform:uppercase;
+    padding:4px 10px;border-radius:2px;
+    white-space:nowrap;
+  }
+  .c-keep{background:var(--keep-bg);color:var(--keep)}
+  .c-adapt{background:var(--adapt-bg);color:var(--adapt)}
+  .c-cut{background:var(--cut-bg);color:var(--cut)}
+
+  .tally{
+    display:flex;flex-wrap:wrap;gap:10px;
+    margin:0 0 30px;
+  }
+  .tally span{
+    font-family:var(--f-mono);font-size:11.5px;letter-spacing:.08em;
+    text-transform:uppercase;padding:6px 12px;border-radius:2px;
+  }
+
+  /* ---------- brand ---------- */
+  .swatches{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(128px,1fr));
+    gap:14px;margin:0 0 30px;
+  }
+  .sw{border:1px solid var(--rule);border-radius:2px;overflow:hidden;background:var(--surface)}
+  .sw .chipfill{height:64px}
+  .sw .lab{padding:9px 11px 11px}
+  .sw .hex{font-family:var(--f-mono);font-size:12px;color:var(--ink);font-weight:600;letter-spacing:.02em}
+  .sw .use{font-size:12px;color:var(--muted);line-height:1.4;margin-top:2px}
+
+  .callout{
+    background:var(--sand-soft);
+    border-left:3px solid var(--brick);
+    padding:20px 22px;
+    margin:26px 0;
+    border-radius:0 2px 2px 0;
+  }
+  .callout p:last-child{margin-bottom:0}
+  .callout .hd{
+    font-family:var(--f-mono);font-size:11px;letter-spacing:.14em;
+    text-transform:uppercase;color:var(--brick);margin:0 0 8px;
+  }
+
+  /* ---------- phases ---------- */
+  .phase{
+    display:grid;
+    grid-template-columns:auto 1fr;
+    gap:0 22px;
+    padding:24px 0;
+    border-bottom:1px solid var(--rule);
+  }
+  .phase:first-of-type{border-top:1px solid var(--rule-strong)}
+  .num{
+    font-family:var(--f-display);
+    font-size:1.5rem;font-weight:500;font-style:italic;
+    color:var(--brick);
+    line-height:1.1;
+    font-variant-numeric:tabular-nums;
+  }
+  .phase h3{margin:0 0 6px;font-size:1.08rem}
+  .phase p{margin:0;font-size:.97rem}
+  .phase .tag{
+    display:inline-block;margin-top:9px;
+    font-family:var(--f-mono);font-size:10.5px;letter-spacing:.1em;
+    text-transform:uppercase;color:var(--muted);
+  }
+
+  /* ---------- lists ---------- */
+  ul{padding-left:0;list-style:none;margin:0 0 18px}
+  ul li{
+    position:relative;padding-left:20px;margin-bottom:10px;
+    max-width:64ch;
+  }
+  ul li::before{
+    content:"";position:absolute;left:2px;top:.62em;
+    width:5px;height:5px;background:var(--brick);border-radius:50%;
+  }
+  ol{padding-left:22px;margin:0 0 18px}
+  ol li{margin-bottom:11px;max-width:64ch;padding-left:4px}
+  ol li::marker{color:var(--brick);font-weight:600;font-family:var(--f-mono);font-size:.9em}
+
+  .qs li strong{display:block;margin-bottom:1px}
+
+  hr.rule{border:0;border-top:2px solid var(--ink);margin:72px 0 0}
+  .signoff{
+    font-family:var(--f-mono);font-size:11.5px;letter-spacing:.08em;
+    text-transform:uppercase;color:var(--muted);
+    padding-top:18px;
+  }
+
+  @media (max-width:560px){
+    body{font-size:16px}
+    .wrap{padding:0 20px 72px}
+    .row{grid-template-columns:1fr}
+    .phase{grid-template-columns:1fr;gap:8px}
+  }
+  @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+
+<div class="wrap">
+
+  <header class="mast">
+    <p class="eyebrow">Skill audit &amp; adaptation plan</p>
+    <h1>True Homes Content System</h1>
+    <p class="standfirst">Ten downloaded skills, read end to end and scored against one specific account: <strong>@truehomes.realty</strong> — Triangle-area real estate, drafts only, no paid tools.</p>
+    <div class="meta">
+      <span><b>4</b> build</span>
+      <span><b>2</b> rewrite</span>
+      <span><b>4</b> cut</span>
+      <span><b>$0</b> / month</span>
+      <span><b>1</b> free credential</span>
+    </div>
+  </header>
+
+  <section>
+    <h2>The short version</h2>
+    <p>These are better than most of what circulates on YouTube. The frameworks are real — the competitor scoring math in particular is genuinely well thought out, and the carousel and story renderers are the right architecture for what you want.</p>
+    <p>But every one of them was written for the same fictional customer: an online coach selling a $8,000 program to strangers, on a Mac, paying for Metricool and a scraping API. You are a licensed agent in a relationship business, working under a brokerage, on a free budget. Four of the ten survive that translation intact. Two need their engine swapped. Four should not go anywhere near your account, and one of those has a specific reason I'll come back to.</p>
+  </section>
+
+  <section>
+    <h2>Verdict on each skill</h2>
+    <p class="dek">Grouped by what happens to it, not by the order they came in.</p>
+
+    <div class="tally">
+      <span class="chip c-keep">Build &mdash; adapt and keep</span>
+      <span class="chip c-adapt">Rewrite &mdash; good idea, wrong engine</span>
+      <span class="chip c-cut">Cut</span>
+    </div>
+
+    <div class="ledger">
+
+      <div class="row">
+        <span class="name">instagramcarousel.md</span>
+        <span class="chip c-keep">Build</span>
+        <p class="why">Your top priority and the strongest file in the set. The Pillow renderer is free, deterministic, and produces real 1080&times;1350 PNGs. It ships hardcoded to a dark navy tech palette with Bebas Neue — all of that gets replaced with your blush and brick and a serif matching your signage. One structural change: it web-searches for stock images, which is wrong for real estate. It should pull from your own listing photos.</p>
+      </div>
+
+      <div class="row">
+        <span class="name">Story-Sequences.md</span>
+        <span class="chip c-keep">Build</span>
+        <p class="why">Also yours to keep. The design rules are unusually disciplined — real photo on every frame, text high, exactly one marker underline per frame. That single-accent rule was written for a generic brand and happens to land perfectly on maroon over blush. The authority-then-ask rhythm (two teaching sequences per one CTA) suits a referral business better than it suits the coach it was written for.</p>
+      </div>
+
+      <div class="row">
+        <span class="name">CONTENT-STRATEGY-SKILL.md</span>
+        <span class="chip c-keep">Build</span>
+        <p class="why">The ICP-plus-offer method is sound and it's the file everything else feeds from. It assumes one buyer and one paid offer. You have two audiences pulling in different directions and no course to sell, so this becomes two ICP docs and a service positioning doc rather than one of each. Its voice rules also ban hashtags and emoji outright — defensible for a business coach, an open question for local real estate.</p>
+      </div>
+
+      <div class="row">
+        <span class="name">SCRIPTED-REELS-PIPELINE.md</span>
+        <span class="chip c-keep">Build&nbsp;later</span>
+        <p class="why">The editing craft here is the real thing and it's all free — silence detection, the retake-collision trick, caption phrase grouping. It's also macOS-specific and ends in a paid scheduler. Park the video half until you're actually recording. Its script-writing rules are worth harvesting <em>now</em>: 30 to 40 seconds beats 60, question hooks underperform, and the spoken-versus-written translation table is good.</p>
+      </div>
+
+      <div class="row">
+        <span class="name">Competitor-Radar.md</span>
+        <span class="chip c-adapt">Rewrite</span>
+        <p class="why">The best thinking in the whole set. Scoring each reel against its own creator's <em>median</em> rather than average, the 3-to-30-day window, the absolute floor — every one of those choices is correct and explained. But it runs on HikerAPI, which is paid and an affiliate link. We keep the math, swap in Meta's free endpoint. Two honest caveats below.</p>
+      </div>
+
+      <div class="row">
+        <span class="name">instagram-post-tracker.md</span>
+        <span class="chip c-adapt">Rewrite</span>
+        <p class="why">Right idea: snapshot your own numbers daily so you can see whether a post kept climbing, which one number never tells you. Wrong source — it reads from Metricool, whose API is paid-plan-only. Your own account's insights are free through the same credential we're setting up anyway. The SQLite two-table design carries over unchanged.</p>
+      </div>
+
+      <div class="row">
+        <span class="name">InstagramResearch.md</span>
+        <span class="chip c-cut">Cut</span>
+        <p class="why">Does the same job as Competitor-Radar with more machinery and three paid scrapers behind it. Two competitor systems is one too many. Competitor-Radar is the better-argued of the pair.</p>
+      </div>
+
+      <div class="row">
+        <span class="name">Instagram scheduling.md</span>
+        <span class="chip c-cut">Cut</span>
+        <p class="why">Paid Metricool, and it uploads your video to <code>tmpfiles.org</code> — an anonymous public file host with no authentication — to hand Metricool a URL. Anyone with the link can fetch it. Client footage and unlisted properties should not pass through there. You chose draft-only anyway, so nothing is lost right now.</p>
+      </div>
+
+      <div class="row">
+        <span class="name">AI-Reels-Pipeline.md</span>
+        <span class="chip c-cut">Cut</span>
+        <p class="why">HeyGen at about $24/month plus Google Veo at $0.60&ndash;$1.60 per generated clip, on a Node and Remotion stack. That's outside a free budget on its own. Separately: it builds an AI avatar that delivers your scripts on camera. In a business that runs on people trusting you with the largest transaction of their lives, a synthetic version of you is a strange trade.</p>
+      </div>
+
+      <div class="row">
+        <span class="name">VIRAL-REELS-PIPELINE.md</span>
+        <span class="chip c-cut">Cut</span>
+        <p class="why">This one I'd cut even if it were free, and the reason is in your own paperwork — see directly below.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <section>
+    <h2>The one real red flag</h2>
+    <p>VIRAL-REELS-PIPELINE downloads another creator's reel with <code>yt-dlp</code>, <strong>rips their audio track</strong>, re-uploads that audio under your own video, and copies their on-screen text verbatim — the skill's own instruction is to approve the transcribed text "1:1."</p>
+    <p>Using trending audio <em>inside Instagram</em> is fine; Instagram licenses it. Extracting that audio to a file and republishing it as your video's soundtrack is a different act, and it routes around the licensing entirely.</p>
+
+    <div class="callout">
+      <p class="hd">From the eXp agreement in your AI Use Rules folder</p>
+      <p>The indemnification section lists, among the things you personally cover eXp for: <em>"Agent's infringement of any intellectual property rights of any third party."</em></p>
+      <p>That moves this from an abstract copyright worry to a named liability you've already signed for. Not worth it for a reel.</p>
+    </div>
+
+    <p>Worth noting what that same clause means more broadly: the agreement binds you to eXp's separate <strong>Policies</strong> document, your state commission's rules, MLS rules, and the NAR Code of Ethics. The advertising rules that actually govern your posts live in those, not in the contract itself — which is why the sample ICA you uploaded doesn't contain them. That's the document to track down.</p>
+  </section>
+
+  <section>
+    <h2>Your brand, as extracted</h2>
+    <p class="dek">Pulled from the two files in your Branding folder. These become the renderer's config, so everything generates on-brand without you specifying it each time.</p>
+
+    <div class="swatches">
+      <div class="sw"><div class="chipfill" style="background:#E1CCBE"></div><div class="lab"><div class="hex">#E1CCBE</div><div class="use">Blush ground</div></div></div>
+      <div class="sw"><div class="chipfill" style="background:#7B2F2F"></div><div class="lab"><div class="hex">#7B2F2F</div><div class="use">Brick accent</div></div></div>
+      <div class="sw"><div class="chipfill" style="background:#000000"></div><div class="lab"><div class="hex">#000000</div><div class="use">Headline type</div></div></div>
+      <div class="sw"><div class="chipfill" style="background:#FFFFFF;border-bottom:1px solid var(--rule)"></div><div class="lab"><div class="hex">#FFFFFF</div><div class="use">Reversed type</div></div></div>
+    </div>
+
+    <p><strong>Type.</strong> Your signage pairs a high-contrast serif for headlines with a clean humanist sans for details. Playfair Display and Source Sans 3 are the closest free equivalents and both are already on Google Fonts — this page is set in them so you can judge the pairing.</p>
+    <p><strong>Assets on hand.</strong> Headshot (cut out, usable), Raleigh skyline silhouette, the floral mark, and the two-line brick swash from the Under Contract graphic. That swash is a good recurring device — it can underline the accent phrase on story frames, which is exactly the one-highlight-per-frame rule the story skill asks for.</p>
+    <p><strong>Standing disclosure.</strong> <code>True Homes Realty · Brokered by eXp Realty</code> — from your email signature, and it gets hardcoded into the CTA slide and the final story frame so it can't be omitted by accident.</p>
+
+    <div class="callout">
+      <p class="hd">One piece of feedback, since you asked</p>
+      <p>The identity is genuinely good — warm, distinctive, and nothing like the grey-and-navy every other agent uses. Two gaps. There's no <em>portrait</em> lockup: everything you have is landscape or 4:5, and Instagram Stories are 9:16, so the mark and disclosure need a vertical arrangement. And blush behind black serif is lovely in print but sits at fairly low contrast on a phone in daylight — for carousel body text I'd hold the blush as the ground and darken the text toward near-black, or invert to brick-on-cream for slides that need to carry more copy.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>What this costs and what I'll need</h2>
+    <p class="dek">One credential. Free. No card.</p>
+    <p>A <strong>Meta developer app</strong> and a long-lived access token. Since @truehomes.realty is already a Business account linked to a Facebook Page, this is a form at developers.facebook.com and a token generated against your own Page — no app review, because we're only reading your own data and public business profiles. I'll walk you through it screen by screen when we get to Phase 3.</p>
+    <p>That one token covers your own post insights and the competitor radar. Nothing else in the surviving four needs a key: the carousel and story renderers run entirely on your machine with Pillow, and the writing is done here.</p>
+
+    <h3>Two honest caveats on the radar</h3>
+    <ul>
+      <li>Meta's free <code>business_discovery</code> endpoint returns a competitor's captions, likes, comments, and post timing — but <strong>not view counts</strong> on their reels. So the outlier math has to score on engagement rather than views. Same method, slightly noisier signal. It's the real cost of not paying for a scraper, and it's a fair trade at zero dollars.</li>
+      <li>The skill's thresholds are set for a huge niche — it only counts a reel as an outlier above 30,000 views. In Triangle-area real estate that would flag nothing, possibly for months. We'll set the floor from your competitors' actual medians after the first run, which the skill itself recommends doing.</li>
+    </ul>
+    <p>Your list of eight is also under the ten-to-twenty the method wants, and they're all local agents. Adding three or four bigger national accounts would give the radar proven formats to pull from, not just neighbors.</p>
+  </section>
+
+  <section>
+    <h2>Build order</h2>
+    <p class="dek">Sequenced so you get something usable at the end of the first phase rather than the fourth.</p>
+
+    <div class="phase">
+      <div class="num">01</div>
+      <div>
+        <h3>Repository and brand config</h3>
+        <p>Convert the survivors into real <code>.claude/skills/&lt;name&gt;/SKILL.md</code> files with proper frontmatter — as loose markdown they'd never trigger. Brand tokens, disclosure line, and Fair Housing rules land in one config every skill reads.</p>
+        <span class="tag">No input needed from you</span>
+      </div>
+    </div>
+
+    <div class="phase">
+      <div class="num">02</div>
+      <div>
+        <h3>Carousel renderer, re-skinned</h3>
+        <p>Rebuild the Pillow renderer in your palette and type, with a portrait lockup and the disclosure baked into the last slide. I'll render a real carousel on a real Triangle topic so you're judging output, not a description.</p>
+        <span class="tag">Needs your logo files &amp; a sample listing photo set</span>
+      </div>
+    </div>
+
+    <div class="phase">
+      <div class="num">03</div>
+      <div>
+        <h3>Strategy docs and the first content slate</h3>
+        <p>Two ICP docs, positioning, then twenty ideas — ten for reach, ten to convert. This is where the walkable-neighborhoods angle gets tested properly.</p>
+        <span class="tag">Needs 30 minutes of your answers</span>
+      </div>
+    </div>
+
+    <div class="phase">
+      <div class="num">04</div>
+      <div>
+        <h3>Meta token, radar, and tracker</h3>
+        <p>Set up the credential, calibrate the outlier floors against your actual cohort, and start the daily snapshot so history begins accumulating while everything else is being built.</p>
+        <span class="tag">Needs 15 minutes together on the Meta app</span>
+      </div>
+    </div>
+
+    <div class="phase">
+      <div class="num">05</div>
+      <div>
+        <h3>Story sequences</h3>
+        <p>Last because it depends on a photo library you'll need to assemble — 15 to 30 shots of you working, neighborhoods, listings, the greenways.</p>
+        <span class="tag">Needs your photo library</span>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Cross-posting to TikTok</h2>
+    <p>Straightforward, with one design consequence worth deciding now. TikTok's posting API needs app review and isn't worth it for draft-only, so cross-posting means exporting the files and uploading by hand — a couple of minutes per post.</p>
+    <p>The consequence: Instagram carousels are 1080&times;1350 and TikTok photo posts want 9:16. Rather than cropping and losing text, the renderer should emit <strong>both ratios from one config</strong> — cheap to build in now, annoying to retrofit. Stories at 1080&times;1920 already match TikTok natively.</p>
+    <p>One caution: TikTok suppresses reach on clips carrying a visible Instagram watermark, so cross-posts should come from the rendered files, never from a saved-down Reel.</p>
+  </section>
+
+  <section>
+    <h2>Guardrails I'll build in</h2>
+    <p class="dek">Generic content skills have no idea you hold a license. These become hard rules in the config, not suggestions in a prompt.</p>
+    <ul>
+      <li><strong>Fair Housing.</strong> No caption may describe who a neighborhood or home is <em>for</em> — no "perfect for young families," no "safe area," no school-quality claims used as a proxy. This one deserves care given your bikeable-and-walkable angle, which lives close to that line and needs to stay on the amenities side of it: greenways, distances, transit, parks. Facts about the place, never inferences about the people.</li>
+      <li><strong>Brokerage attribution</strong> on every generated asset, per your commission's advertising rules and eXp's Policies.</li>
+      <li><strong>No claims about a property</strong> — price, square footage, status, days on market — unless it comes from a source you supplied. Nothing invented, nothing web-searched into a listing description.</li>
+      <li><strong>No client detail without written permission,</strong> which rules out the proof-screenshot pattern the story skill leans on. Closed-transaction imagery only where you've cleared it.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>What I need from you</h2>
+    <p class="dek">Nothing here blocks Phase 1 — I can start on the repo and the renderer immediately.</p>
+    <ol class="qs">
+      <li><strong>Luxury or walkable — which leads?</strong> My read: the neighborhood expertise is your reach engine and luxury is your conversion engine. Knowing every park and greenway in the Triangle is a specific, memorable thing that strangers follow; "luxury agent" is what every competitor on your list already says. If that's right, we aim the reach half of the content at neighborhoods and the convert half at sellers. Tell me if you see it differently.</li>
+      <li><strong>Hashtags and emoji — in or out?</strong> Every one of these skills bans both. That's right for a business coach and I'm less sure for local real estate, where location tags do real discovery work. Your call and I'll encode it.</li>
+      <li><strong>Do you have a photo library?</strong> Rough count of usable shots — you at work, listings, neighborhoods, greenways. Determines whether Phase 5 is close or far off.</li>
+      <li><strong>eXp's Policies document and your NC advertising rules.</strong> The sample ICA points at them but doesn't contain them. Drop them in the AI Use Rules folder and I'll encode the specifics rather than my general understanding.</li>
+    </ol>
+  </section>
+
+  <hr class="rule">
+  <p class="signoff">Ten skills read in full · Four to build · @truehomes.realty · Triangle, NC</p>
+
+</div>
