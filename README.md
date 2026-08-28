@@ -8,7 +8,8 @@ Full audit and build plan: `content-system-plan.html`.
 
 ## Status
 
-Planning complete. Nothing built yet.
+Carousel renderer built and rendering. Strategy docs, radar, tracker, and
+story sequences still to come.
 
 | | |
 |---|---|
@@ -32,11 +33,30 @@ the agent personally liable for third-party IP infringement).
 
 ## Layout
 
-    brand/     Source brand assets pulled from Drive
-    config/    brand.json (tokens, disclosure, hard rules), competitors.json
+    .claude/skills/carousel/   The carousel skill
+    brand/                     Brand assets + extracted headshot and skyline
+    config/brand.json          Tokens, disclosure, voice, hard rules
+    config/competitors.json    Radar cohort
+    render/carousel.py         Renderer — IG 1080x1350 + TikTok 1080x1920
+    workspace/<slug>/          One carousel: config.json, images/, ig/, tiktok/
+
+## Positioning
+
+Walkable and bikeable Triangle expertise is the **reach** engine — it is the
+differentiator none of the eight tracked competitors claim. Luxury is the
+**convert** engine.
+
+## Rendering a carousel
+
+    python3 render/carousel.py workspace/walkable-triangle --validate
+    python3 render/carousel.py workspace/walkable-triangle
+
+Every factual claim in a config's `verify` list prints after each run and must
+be checked before posting.
 
 ## Guardrails
 
-`config/brand.json` carries four non-negotiable rules — Fair Housing language,
+`config/brand.json` carries five non-negotiable rules — Fair Housing language,
 brokerage attribution, no invented property facts, no client detail without
-permission. Every skill reads them.
+permission, and no AI likeness (no synthetic face or voice, ever). Every skill
+reads them.

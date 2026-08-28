@@ -6,24 +6,53 @@
     "title": "Real Estate Agent",
     "business": "True Homes Realty",
     "brokerage": "eXp Realty",
-    "disclosure_line": "True Homes Realty · Brokered by eXp Realty",
+    "disclosure_line": "True Homes Realty \u00b7 Brokered by eXp Realty",
     "market": "Triangle, North Carolina",
     "website": "TrueHomesRealty.com"
   },
   "colors": {
-    "blush":  { "hex": "#E1CCBE", "use": "primary ground" },
-    "brick":  { "hex": "#7B2F2F", "use": "accent, underlines, CTA" },
-    "black":  { "hex": "#000000", "use": "headline type on blush" },
-    "white":  { "hex": "#FFFFFF", "use": "reversed type on brick" }
+    "blush": {
+      "hex": "#E1CCBE",
+      "use": "primary ground"
+    },
+    "brick": {
+      "hex": "#7B2F2F",
+      "use": "accent, underlines, CTA"
+    },
+    "black": {
+      "hex": "#000000",
+      "use": "headline type on blush"
+    },
+    "white": {
+      "hex": "#FFFFFF",
+      "use": "reversed type on brick"
+    }
   },
   "type": {
-    "display": { "family": "Playfair Display", "source": "Google Fonts", "note": "closest free match to the serif on her signage" },
-    "body":    { "family": "Source Sans 3",   "source": "Google Fonts", "note": "humanist sans matching the sign detail type" }
+    "display": {
+      "family": "Playfair Display",
+      "source": "Google Fonts",
+      "note": "closest free match to the serif on her signage"
+    },
+    "body": {
+      "family": "Source Sans 3",
+      "source": "Google Fonts",
+      "note": "humanist sans matching the sign detail type"
+    }
   },
   "output_sizes": {
-    "carousel_ig": [1080, 1350],
-    "carousel_tiktok": [1080, 1920],
-    "story": [1080, 1920]
+    "carousel_ig": [
+      1080,
+      1350
+    ],
+    "carousel_tiktok": [
+      1080,
+      1920
+    ],
+    "story": [
+      1080,
+      1920
+    ]
   },
   "assets": {
     "headshot": "cut-out, available in brand/for-sale-template.png",
@@ -35,6 +64,16 @@
     "fair_housing": "Never describe who a home or neighborhood is FOR. No 'perfect for families', no 'safe', no school-quality claims. Amenities and distances only.",
     "attribution": "Every generated asset carries the disclosure_line.",
     "property_claims": "No price, sqft, status, or days-on-market unless supplied by the user. Never web-searched.",
-    "client_privacy": "No client messages, names, or transaction detail without written permission."
+    "client_privacy": "No client messages, names, or transaction detail without written permission.",
+    "no_ai_likeness": "Never generate, suggest, or script a synthetic version of her face or voice. No AI avatars, no voice cloning. Her likeness is her own."
+  },
+  "voice": {
+    "emoji": "None, unless a single emoji is genuinely elegant in context. Never as bullets or decoration.",
+    "hashtags": "UNDECIDED \u2014 pending her call. Default until then: a small set of Triangle location tags, no generic real-estate tags.",
+    "tone": "Short complete sentences, one idea each. Specific over vague. No hype words.",
+    "pillars": {
+      "reach": "Walkable and bikeable Triangle life \u2014 neighborhoods, greenways, parks. The differentiator.",
+      "convert": "Sellers and buyers ready to move. Luxury positioning lives here."
+    }
   }
 }
