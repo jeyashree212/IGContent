@@ -48,7 +48,7 @@ One config file in, branded PNGs out at both aspect ratios. The look lives in
 }
 ```
 
-- 5–10 slides. First is `hook`, last is `cta`. Enforced by `--validate`.
+- 5–10 slides. First is `hook` or `photo`, last is `cta`. Enforced by `--validate`.
 - **`photo`** is the flair slide: full-bleed image, scrim, white type over it.
   Use it for real city photos. Falls back to `body` if the image is missing.
 - **`stat`** sets one number huge in brick with the corner wedge. Use it for a

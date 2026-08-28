@@ -1,0 +1,77 @@
+{
+  "title": "The Highway 55 corridor",
+  "pillar": "reach",
+  "angle": "her own story \u2014 grew up in Cary/Morrisville, family moved down 55, she was the listing agent",
+  "hashtags": [
+    "#caryNC",
+    "#hollyspringsnc",
+    "#fuquayvarina",
+    "#morrisvillenc",
+    "#wakecountync",
+    "#trianglerealestate"
+  ],
+  "verify": [
+    "SLIDE 5 \u2014 'more than doubled between 2016 and 2024' is generalized from the real numbers you gave me. Confirm you are comfortable publishing it at all: it is one property, it reads as a performance claim, and the exact figures are public record to anyone who looks it up.",
+    "SLIDE 4 \u2014 add the actual international grocers and shops you would name. I left the line general on purpose.",
+    "SLIDE 4 \u2014 confirm the West Cary price framing. I wrote 'the kind of money that used to buy in three towns' rather than naming a number.",
+    "SLIDE 6 \u2014 the three checks are drafted from what you said. Replace any that is not what you actually tell people.",
+    "Confirm 'my family' is how you want it framed, with no further detail.",
+    "SCHOOLS: deliberately omitted. See my note \u2014 this is a Fair Housing problem, not a style choice.",
+    "Fair Housing pass on the whole thing before posting: growth, roads, businesses and amenities only. Never who a town is for."
+  ],
+  "slides": [
+    {
+      "type": "photo",
+      "eyebrow": "The 55 corridor",
+      "text": "I watched this whole corridor *get built*.",
+      "caption": "Rural North Carolina to everything you need, in about the time it takes to grow up here.",
+      "image": "west-cary-streetscape.heic"
+    },
+    {
+      "type": "body",
+      "eyebrow": "Where I am from",
+      "title": "Cary and Morrisville",
+      "text": "I grew up in both. So when I tell you a neighborhood changed, I am not reading it off a chart. I watched the Parkside complex go from dirt to a thriving shopping center."
+    },
+    {
+      "type": "photo",
+      "eyebrow": "One road",
+      "text": "*55* connects all of it.",
+      "caption": "Past downtown Cary, out to US 1 and 540. One of the best access points in the Triangle that still has room to grow.",
+      "image": "corridor-map.png"
+    },
+    {
+      "type": "body",
+      "eyebrow": "What actually changed",
+      "title": "West Cary",
+      "bullets": [
+        "One or two established neighborhoods, *then dozens*",
+        "New construction now reaching *seven figures*",
+        "International grocers, boutiques, *restaurants worth the drive*",
+        "Parks and arts that did not exist *twenty years ago*"
+      ]
+    },
+    {
+      "type": "photo",
+      "eyebrow": "My own family",
+      "text": "Then my family *made the move*.",
+      "caption": "Out of West Cary, down 55. I was the listing agent on the house they left. It had more than doubled between 2016 and 2024.",
+      "image": "jeyashree-at-sign.jpg"
+    },
+    {
+      "type": "body",
+      "eyebrow": "Before you drive it",
+      "title": "What to check",
+      "bullets": [
+        "Drive 55 at *7:40am*, not on a Sunday",
+        "Ask what is *approved but not built* near the lot",
+        "Check which *town line* you are actually inside"
+      ]
+    },
+    {
+      "type": "cta",
+      "text": "I have talked to dozens of people weighing this exact move. Tell me which end of 55 you are looking at and I will help you find the place that fits.",
+      "button_text": "Send me a DM"
+    }
+  ]
+}

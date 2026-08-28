@@ -491,7 +491,7 @@ def render_photo(cfg, slide, F, C, brand, dims, carousel_dir, index, total):
     if not src:
         return render_body(cfg, slide, F, C, brand, dims, carousel_dir, index, total)
 
-    img = scrim(cover_fit(open_photo(src), W, H))
+    img = scrim(cover_fit(open_photo(src), W, H), strength=0.9, start=0.28)
     draw = ImageDraw.Draw(img)
     content_w = W - MARGIN * 2
 
@@ -508,8 +508,11 @@ def render_photo(cfg, slide, F, C, brand, dims, carousel_dir, index, total):
     y = H - FOOTER_H - 22 - head_h - sum(h for _, h in blocks)
 
     if slide.get("eyebrow"):
+        for dx, dy in ((2, 2), (1, 1)):
+            draw.text((MARGIN + dx, y - 54 + dy), slide["eyebrow"].upper(),
+                      font=F["eyebrow"], fill=(20, 12, 9))
         draw.text((MARGIN, y - 54), slide["eyebrow"].upper(), font=F["eyebrow"],
-                  fill=hex_to_rgb("#E8C4B6"))
+                  fill=hex_to_rgb("#F2D5C8"))
 
     y = draw_accented(draw, lines, (MARGIN, y), font,
                       hex_to_rgb("#FFFFFF"), hex_to_rgb("#E9A99B"), factor=1.04)
@@ -580,8 +583,10 @@ def validate(cfg):
     slides = cfg.get("slides", [])
     if not 5 <= len(slides) <= 10:
         errs.append(f"need 5-10 slides, got {len(slides)}")
-    if not slides or slides[0].get("type") != "hook":
-        errs.append("slide 1 must be type 'hook'")
+    # A full-bleed photo is a hook — it just carries the headline over an
+    # image instead of under one.
+    if not slides or slides[0].get("type") not in ("hook", "photo"):
+        errs.append("slide 1 must be type 'hook' or 'photo'")
     if not slides or slides[-1].get("type") != "cta":
         errs.append("last slide must be type 'cta'")
     for i, s in enumerate(slides, 1):
