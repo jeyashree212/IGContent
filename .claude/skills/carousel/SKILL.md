@@ -39,17 +39,52 @@ One config file in, branded PNGs out at both aspect ratios. The look lives in
     { "type": "body", "eyebrow": "Section label", "title": "Short title",
       "text": "One idea.", "bullets": ["max four", "each one line"],
       "image": "listing-front.jpg" },
+    { "type": "photo", "eyebrow": "Label", "text": "Type over the photo.",
+      "caption": "Optional supporting line.", "image": "cary-downtown.heic" },
+    { "type": "stat", "eyebrow": "Label", "stat": "55",
+      "title": "Short title", "text": "What the number means." },
     { "type": "cta", "text": "The ask.", "button_text": "Follow for more" }
   ]
 }
 ```
 
 - 5–10 slides. First is `hook`, last is `cta`. Enforced by `--validate`.
+- **`photo`** is the flair slide: full-bleed image, scrim, white type over it.
+  Use it for real city photos. Falls back to `body` if the image is missing.
+- **`stat`** sets one number huge in brick with the corner wedge. Use it for a
+  road number, a year, a distance — something concrete and checkable.
+- Vary the types. A carousel of nothing but `body` slides reads flat.
 - `*asterisks*` colour a phrase brick. One or two per slide, never more.
 - `image`: a filename in `workspace/<slug>/images/`, or `brand:<file>` for a
   shared asset in `brand/`. A missing image degrades to the blush ground.
-- Drop her photos into `images/`. **iPhone HEIC will not open** — export as JPEG
-  first, or convert on the way in.
+- **Drop iPhone photos in as-is.** `.HEIC` opens natively via `pillow-heif`, and
+  EXIF rotation is baked in so portrait shots are never sideways.
+
+## Where she actually works
+
+Core: **Cary, Morrisville, Raleigh, Holly Springs, Fuquay-Varina, Garner.**
+
+- **Downtown Raleigh** is her specialty — she lives there.
+- **Cary and Morrisville** — she grew up in both and can speak first-hand to
+  how they changed.
+- **The Highway 55 corridor** — her parents moved from West Cary out to
+  Fuquay-Varina/Holly Springs, the same move many families she grew up with
+  made. This is the strongest reach angle she has.
+
+**Never write Durham, Carrboro, or Chapel Hill content.** Not her market, not
+her expertise. Naming her as a guide there is worse than saying nothing.
+
+Get granular. "West Cary" beats "Cary". A named road, intersection, or park
+beats a town. If you do not know the specific, **ask her** — do not fill the
+gap with something plausible.
+
+## Hashtags
+
+5–7, never more. At least three hyperlocal to the exact place in the post.
+Pull from the pool in `config/brand.json`. Skip #realestate, #realtor,
+#dreamhome and anything else sitting on 50M+ posts — they return bot follows,
+not buyers. The pool is reasoned, not measured; the post tracker settles it
+once it has a few weeks of data.
 
 ## Voice
 

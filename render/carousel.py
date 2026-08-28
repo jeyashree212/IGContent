@@ -19,7 +19,14 @@ import math
 import sys
 from pathlib import Path
 
-from PIL import Image, ImageDraw, ImageFont, ImageFilter
+from PIL import Image, ImageDraw, ImageFont, ImageOps, ImageEnhance
+
+try:
+    import pillow_heif
+    pillow_heif.register_heif_opener()
+    HEIC = True
+except ImportError:          # pip install pillow-heif
+    HEIC = False
 
 ROOT = Path(__file__).resolve().parent.parent
 FONT_DIR = Path(__file__).resolve().parent / "fonts"
@@ -66,6 +73,10 @@ def load_fonts():
         return f
 
     return {
+        "stat":        pf(210, "Bold"),
+        "stat_sm":     pf(150, "Bold"),
+        "over":        pf(92, "Bold"),
+        "over_sm":     pf(72, "Bold"),
         "hook":        pf(104, "Bold"),
         "hook_sm":     pf(84, "Bold"),
         "title":       pf(76, "Bold"),
@@ -193,6 +204,40 @@ def circle_crop(img, size):
     return out.resize((size, size), Image.LANCZOS)
 
 
+def open_photo(path, grade=True):
+    """
+    Open any photo she drops in — including straight-off-the-iPhone HEIC —
+    with EXIF rotation baked in so portrait shots aren't sideways.
+    """
+    img = Image.open(path)
+    img = ImageOps.exif_transpose(img).convert("RGB")
+    if grade:
+        img = ImageEnhance.Color(img).enhance(1.06)
+        img = ImageEnhance.Contrast(img).enhance(1.04)
+    return img
+
+
+def scrim(img, strength=0.86, start=0.34):
+    """Darken the lower part of a photo so white type reads over it."""
+    w, h = img.size
+    grad = Image.new("RGBA", (w, h), (0, 0, 0, 0))
+    gd = ImageDraw.Draw(grad)
+    top = int(h * start)
+    for y in range(top, h):
+        t = (y - top) / max(1, h - top)
+        gd.line([(0, y), (w, y)], fill=(24, 14, 10, int((t ** 1.4) * 255 * strength)))
+    return Image.alpha_composite(img.convert("RGBA"), grad).convert("RGB")
+
+
+def corner_wedge(img, C, size=250):
+    """The diagonal brick corner from her FOR SALE template, bottom-right."""
+    W, H = img.size
+    layer = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    ImageDraw.Draw(layer).polygon(
+        [(W, H - size), (W, H), (W - size, H)], fill=hex_to_rgb(C["brick"]) + (255,))
+    return Image.alpha_composite(img.convert("RGBA"), layer).convert("RGB")
+
+
 def cover_fit(img, w, h):
     ratio = max(w / img.width, h / img.height)
     img = img.resize((int(img.width * ratio) + 1, int(img.height * ratio) + 1), Image.LANCZOS)
@@ -242,7 +287,7 @@ def render_hook(cfg, slide, F, C, brand, dims, carousel_dir, index, total):
     band_h = int(H * (0.44 if H > 1500 else 0.40))
     src = resolve_image(slide.get("image"), carousel_dir)
     if src:
-        photo = cover_fit(Image.open(src).convert("RGB"), W, band_h)
+        photo = cover_fit(open_photo(src), W, band_h)
         # fade the bottom of the photo into the blush ground
         ground = hex_to_rgb(C["blush"])
         grad = Image.new("RGBA", (W, band_h), (0, 0, 0, 0))
@@ -319,7 +364,7 @@ def render_body(cfg, slide, F, C, brand, dims, carousel_dir, index, total):
 
     img_h = 0
     if src:
-        photo_src = Image.open(src).convert("RGB")
+        photo_src = open_photo(src)
         img_h = 380 if has_bullets else int(H * 0.34)
         blocks.append(("image", img_h + 44))
     if has_bullets:
@@ -393,7 +438,7 @@ def render_cta(cfg, slide, F, C, brand, dims, carousel_dir, index, total):
         ring = size + 22
         draw.ellipse([(cx - ring // 2, top - 11), (cx + ring // 2, top + ring - 11)],
                      fill=hex_to_rgb("#FFFFFF"))
-        circ = circle_crop(Image.open(hs), size)
+        circ = circle_crop(open_photo(hs, grade=False), size)
         img.paste(circ, (cx - size // 2, top), circ)
         draw = ImageDraw.Draw(img)
     else:
@@ -439,7 +484,91 @@ def render_cta(cfg, slide, F, C, brand, dims, carousel_dir, index, total):
     return img
 
 
-RENDERERS = {"hook": render_hook, "body": render_body, "cta": render_cta}
+def render_photo(cfg, slide, F, C, brand, dims, carousel_dir, index, total):
+    """Full-bleed photo with a scrim and type over it. Built for city shots."""
+    W, H = dims
+    src = resolve_image(slide.get("image"), carousel_dir)
+    if not src:
+        return render_body(cfg, slide, F, C, brand, dims, carousel_dir, index, total)
+
+    img = scrim(cover_fit(open_photo(src), W, H))
+    draw = ImageDraw.Draw(img)
+    content_w = W - MARGIN * 2
+
+    blocks = []
+    if slide.get("caption"):
+        blocks.append(("caption", measure(draw, slide["caption"], F["body"], content_w, 1.30) + 26))
+    font = F["over"]
+    lines = wrap_accented(draw, slide["text"], font, content_w)
+    if len(lines) > 3:
+        font = F["over_sm"]
+        lines = wrap_accented(draw, slide["text"], font, content_w)
+    head_h = len(lines) * line_height(font, 1.04)
+
+    y = H - FOOTER_H - 22 - head_h - sum(h for _, h in blocks)
+
+    if slide.get("eyebrow"):
+        draw.text((MARGIN, y - 54), slide["eyebrow"].upper(), font=F["eyebrow"],
+                  fill=hex_to_rgb("#E8C4B6"))
+
+    y = draw_accented(draw, lines, (MARGIN, y), font,
+                      hex_to_rgb("#FFFFFF"), hex_to_rgb("#E9A99B"), factor=1.04)
+
+    if slide.get("caption"):
+        cl = wrap_accented(draw, slide["caption"], F["body"], content_w)
+        draw_accented(draw, cl, (MARGIN, y + 22), F["body"],
+                      hex_to_rgb("#E4D3C9"), hex_to_rgb("#E9A99B"), factor=1.30)
+
+    draw.text((MARGIN, H - 58), brand["account"]["handle"], font=F["footer_semi"],
+              fill=hex_to_rgb("#FFFFFF"), anchor="lm")
+    draw.text((W - MARGIN, H - 58), f"{index} / {total}", font=F["footer"],
+              fill=hex_to_rgb("#E8C4B6"), anchor="rm")
+    return img
+
+
+def render_stat(cfg, slide, F, C, brand, dims, carousel_dir, index, total):
+    """One number, set huge. For growth, distances, price moves."""
+    W, H = dims
+    img = new_slide(W, H, C)
+    draw = ImageDraw.Draw(img)
+    content_w = W - MARGIN * 2
+
+    font = F["stat"]
+    if draw.textlength(slide["stat"], font=font) > content_w:
+        font = F["stat_sm"]
+
+    label_h = measure(draw, slide.get("text", ""), F["body"], content_w, 1.30) if slide.get("text") else 0
+    title_h = line_height(F["title_sm"], 1.16) if slide.get("title") else 0
+    block = line_height(font, 1.0) + 40 + title_h + label_h
+    y = MARGIN + 40 + max(0, ((H - FOOTER_H - MARGIN - 40) - (MARGIN + 40) - block) // 2)
+
+    if slide.get("eyebrow"):
+        draw.text((MARGIN, y - 56), slide["eyebrow"].upper(), font=F["eyebrow"],
+                  fill=hex_to_rgb(C["brick"]))
+
+    draw.text((MARGIN, y), slide["stat"], font=font, fill=hex_to_rgb(C["brick"]))
+    y += line_height(font, 1.0)
+    draw_swash(draw, MARGIN, y + 6, min(content_w, draw.textlength(slide["stat"], font=font)),
+               hex_to_rgb(C["brick"]))
+    y += 46
+
+    if slide.get("title"):
+        draw.text((MARGIN, y), slide["title"], font=F["title_sm"], fill=hex_to_rgb(C["black"]))
+        y += line_height(F["title_sm"], 1.16)
+
+    if slide.get("text"):
+        lines = wrap_accented(draw, slide["text"], F["body"], content_w)
+        draw_accented(draw, lines, (MARGIN, y + 8), F["body"],
+                      hex_to_rgb("#3B2E28"), hex_to_rgb(C["brick"]), factor=1.30)
+
+    img = corner_wedge(img, C)
+    draw = ImageDraw.Draw(img)
+    draw_footer(img, draw, F, C, brand, W, H, index, total)
+    return img
+
+
+RENDERERS = {"hook": render_hook, "body": render_body, "cta": render_cta,
+             "photo": render_photo, "stat": render_stat}
 
 
 # --------------------------------------------------------------------------
@@ -458,6 +587,10 @@ def validate(cfg):
     for i, s in enumerate(slides, 1):
         if s.get("type") not in RENDERERS:
             errs.append(f"slide {i}: unknown type {s.get('type')!r}")
+        if s.get("type") == "stat" and not s.get("stat"):
+            errs.append(f"slide {i}: type 'stat' needs a \"stat\" value")
+        if s.get("type") == "photo" and not s.get("image"):
+            errs.append(f"slide {i}: type 'photo' needs an image (falls back to body)")
         if s.get("bullets") and len(s["bullets"]) > 4:
             errs.append(f"slide {i}: {len(s['bullets'])} bullets, max 4")
     return errs

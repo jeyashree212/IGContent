@@ -7,7 +7,7 @@
     "business": "True Homes Realty",
     "brokerage": "eXp Realty",
     "disclosure_line": "True Homes Realty \u00b7 Brokered by eXp Realty",
-    "market": "Triangle, North Carolina",
+    "market": "Southwest Wake County, North Carolina",
     "website": "TrueHomesRealty.com"
   },
   "colors": {
@@ -69,11 +69,74 @@
   },
   "voice": {
     "emoji": "None, unless a single emoji is genuinely elegant in context. Never as bullets or decoration.",
-    "hashtags": "UNDECIDED \u2014 pending her call. Default until then: a small set of Triangle location tags, no generic real-estate tags.",
+    "hashtags": {
+      "count": "5-7. Never more.",
+      "rule": "At least three must be hyperlocal to the exact place in the post. Skip mega-tags entirely \u2014 #realestate, #realtor, #dreamhome, #homesweethome sit on 50M+ posts and return nothing but bot follows.",
+      "pool": {
+        "cary": [
+          "#caryNC",
+          "#downtowncary",
+          "#caryrealestate"
+        ],
+        "morrisville": [
+          "#morrisvillenc",
+          "#morrisvillerealestate"
+        ],
+        "raleigh": [
+          "#downtownraleigh",
+          "#raleighNC",
+          "#raleighrealestate"
+        ],
+        "holly_springs": [
+          "#hollyspringsnc",
+          "#hollyspringsrealestate"
+        ],
+        "fuquay_varina": [
+          "#fuquayvarina",
+          "#fuquayvarinanc"
+        ],
+        "garner": [
+          "#garnernc"
+        ],
+        "regional": [
+          "#trianglenc",
+          "#wakecountync",
+          "#trianglerealestate",
+          "#919"
+        ]
+      },
+      "note": "This set is reasoned, not measured \u2014 nobody can see conversion by tag from outside. Once the post tracker has run a few weeks, compare reach on posts by tag set and cut what does nothing."
+    },
     "tone": "Short complete sentences, one idea each. Specific over vague. No hype words.",
     "pillars": {
       "reach": "Walkable and bikeable Triangle life \u2014 neighborhoods, greenways, parks. The differentiator.",
       "convert": "Sellers and buyers ready to move. Luxury positioning lives here."
     }
+  },
+  "service_area": {
+    "core": [
+      "Cary",
+      "Morrisville",
+      "Raleigh",
+      "Holly Springs",
+      "Fuquay-Varina",
+      "Garner"
+    ],
+    "specialty": "Downtown Raleigh \u2014 she lives there.",
+    "deep_local_knowledge": [
+      "Cary and Morrisville \u2014 grew up in both, can speak first-hand to how they changed",
+      "The Highway 55 corridor \u2014 her parents moved West Cary to Fuquay-Varina/Holly Springs, the same move many families she grew up with made"
+    ],
+    "avoid": [
+      "Durham",
+      "Carrboro",
+      "Chapel Hill"
+    ],
+    "avoid_reason": "Not her market and not her expertise. Never write content positioning her as a guide to these."
+  },
+  "story_assets": {
+    "the_55_corridor": "Grew up in Cary and Morrisville. Her parents moved from West Cary out to Fuquay-Varina/Holly Springs along Highway 55 \u2014 the same migration many families she grew up with made. Lets her speak to the growth as someone who watched it happen, not someone who read about it.",
+    "downtown_raleigh": "Lives there now. First-hand on walkability, greenway access, and daily life.",
+    "use": "Lead reach content with these. They are the thing no competitor can copy. Never invent story detail \u2014 if a specific is not confirmed, ask her."
   }
 }
