@@ -16,10 +16,11 @@
     "SLIDE 5 \u2014 every name here is verified as of Aug 2026, but retail turns over. Spot-check before posting, and swap in the grocers you actually send people to.",
     "SLIDE 5 \u2014 White Oak Creek Greenway is ~7.5 miles and connects Bond Park to the American Tobacco Trail [verified].",
     "SLIDE 6 \u2014 'more than doubled since 2016' is generalized from your real numbers. Confirm you want it published at all: one property, reads as a performance claim, figures are public record.",
-    "SLIDE 6 \u2014 reframed so the neighbouring agent's rider is out of shot rather than blurred; your own sign still reads. House number and a person in the doorway are blurred. Check it looks natural.",
+    "SLIDE 6 \u2014 now the listing exterior rather than the selfie. IMG_5384 and the selfie were shot minutes apart, so I believe it is the same house, but CONFIRM that before posting: the caption says 'the house they left'.",
     "Confirm 'my family' framing with no further detail.",
     "SCHOOLS: still deliberately omitted. Fair Housing decision.",
-    "TONE: no town is a consolation prize. Cary reads as coveted throughout."
+    "TONE: no town is a consolation prize. Cary reads as coveted throughout.",
+    "SLIDE 6 \u2014 check the yard sign in this frame for the neighbouring agent's rider and any house number."
   ],
   "slides": [
     {
@@ -77,10 +78,11 @@
       "eyebrow": "My own family",
       "text": "Then my family *chose differently*.",
       "caption": "Not because West Cary stopped being wonderful. The house they sold had more than doubled since 2016. Different stage of life, twenty minutes down 55.",
-      "image": "jeyashree-at-sign.jpg",
+      "image": "west-cary-listing-exterior.heic",
       "frame": {
-        "zoom": 1.0,
-        "x": 0.36
+        "zoom": 1.5,
+        "x": 0.42,
+        "y": 0.0
       }
     },
     {

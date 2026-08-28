@@ -12,6 +12,28 @@ built — Instagram blocks everything else.
 
 ---
 
+## Blocked as of August 2026
+
+Her personal Facebook account has been disabled since 2022, and a Meta developer
+app requires a working Facebook login. **Everything below is on hold until that
+is resolved.** See `docs/facebook-appeal.md` for the appeal routes, and
+`research/radar.py` for the manual path that runs in the meantime.
+
+Two things worth checking while the appeal runs, because either could unblock
+this sooner:
+
+1. **Which Facebook account admins the True Homes Realty Page?** If it is a
+   different profile from the disabled one, that account can create the
+   developer app today and none of this waits.
+2. **Is the Page reachable at all** through Meta Business Suite? If the disabled
+   profile was its only admin, the Page may need recovering too — a separate
+   and slower problem worth discovering now rather than later.
+
+**Do not create a new Facebook account to get around the ban.** Meta links
+accounts by device, IP and identity; a replacement profile is likely to be
+disabled too, and it puts the Page and the Instagram account at risk. Appeal
+the real one, or use a different account that legitimately already exists.
+
 ## Before you start
 
 Three things must already be true. All three are, for @truehomes.realty:

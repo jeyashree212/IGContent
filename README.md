@@ -15,7 +15,12 @@ story sequences still to come.
 |---|---|
 | Posture | Draft only — nothing auto-publishes |
 | Budget | $0/month |
-| Credentials | One free Meta Graph API token (not yet created) |
+| Credentials | One free Meta Graph API token — **blocked**, see below |
+
+**Blocker:** the Meta developer app needs a Facebook login, and hers has been
+disabled since 2022. `docs/facebook-appeal.md` has the appeal routes.
+Competitor research runs off a hand-kept log in the meantime
+(`research/radar.py`) — same scoring maths, swappable data source.
 
 ## Verdict on the source skills
 
@@ -42,6 +47,9 @@ the agent personally liable for third-party IP infringement).
     render/carousel.py         Renderer — IG 1080x1350 + TikTok 1080x1920
     render/corridor_map.py     NC 55 corridor map, drawn in brand
     render/contact_sheet.py    Review a folder of photos at a glance
+    research/radar.py          Competitor scoring — manual log now, API later
+    docs/meta-api-setup.md     Token walkthrough (blocked)
+    docs/facebook-appeal.md    Unblocking the Facebook account
     workspace/<slug>/          One carousel: config.json, images/, ig/, tiktok/
 
 ## Positioning
