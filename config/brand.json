@@ -111,6 +111,19 @@
     "pillars": {
       "reach": "Walkable and bikeable Triangle life \u2014 neighborhoods, greenways, parks. The differentiator.",
       "convert": "Sellers and buyers ready to move. Luxury positioning lives here."
+    },
+    "never_talk_down_an_area": {
+      "rule": "Every place she serves gets its pros highlighted. Never position one town as the consolation prize for another, and never imply people 'escaped' somewhere. She wants clients in all six markets.",
+      "applies_to": "Comparisons, migration stories, price framing, and 'why people leave X' angles.",
+      "instead": "Frame movement as a different stage or a different fit, never a downgrade or a forced exit. Two places can both be excellent for different reasons \u2014 say that.",
+      "banned_framings": [
+        "priced out / priced in",
+        "can't afford X so settle for Y",
+        "X is overrated",
+        "the smart money left X",
+        "better value than X (as a knock on X)"
+      ],
+      "also_why": "Comparative put-downs of whole areas edge toward steering. Framing each place on its own merits is both better business and safer under Fair Housing."
     }
   },
   "service_area": {
@@ -132,7 +145,8 @@
       "Carrboro",
       "Chapel Hill"
     ],
-    "avoid_reason": "Not her market and not her expertise. Never write content positioning her as a guide to these."
+    "avoid_reason": "Not her expertise, so she does not position herself as a guide there. She is still happy to help clients in these areas \u2014 this is about not claiming authority, not about declining business.",
+    "cary_note": "High quality and high cost, and highly coveted \u2014 especially West Cary. She actively wants Cary clients. Cary is never the 'before' in a before-and-after story."
   },
   "story_assets": {
     "the_55_corridor": "Grew up in Cary and Morrisville. Her parents moved from West Cary out to Fuquay-Varina/Holly Springs along Highway 55 \u2014 the same migration many families she grew up with made. Lets her speak to the growth as someone who watched it happen, not someone who read about it.",

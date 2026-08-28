@@ -97,6 +97,21 @@ Two rules when using it:
 - **Date the claim** — "as of August 2026" — so it ages honestly instead of
   quietly becoming wrong.
 
+## Never talk down an area
+
+Every place she serves gets its pros highlighted on their own terms. **Cary is
+high quality, high cost and highly coveted — especially West Cary — and she
+wants Cary clients.** No town is ever the consolation prize for another, and no
+migration story is an escape: people move for a different stage or a different
+fit, and two places can both be excellent for different reasons.
+
+Banned framings: "priced out", "can't afford X so settle for Y", "X is
+overrated", "the smart money left X", "better value than X" used as a knock.
+
+This is a business rule first — she wants clients in all six markets — and a
+Fair Housing one second: running down whole areas by comparison edges toward
+steering.
+
 ## Hashtags
 
 5–7, never more. At least three hyperlocal to the exact place in the post.

@@ -21,6 +21,13 @@ buildings, jobs and money. None of them may be turned into a claim about who a
 place is *for*. Growth, infrastructure and amenities — never demographics.
 Note especially that this file contains **no school-quality material**, by design.
 
+**No town is the consolation prize.** Every market here gets its own strengths
+told on their own terms. Cary is high quality, high cost and highly coveted —
+especially West Cary — and she actively wants Cary clients, so Cary is never
+the "before" in a before-and-after. Movement along the corridor is a different
+stage or a different fit, never an escape or a downgrade. Beyond being wrong
+commercially, comparative put-downs of whole areas edge toward steering.
+
 ---
 
 ## 1. The thirty-year arc
@@ -65,7 +72,7 @@ but not built* matters more than what is standing today.
   cited gap. `[V]`
 - **Cary median home price ≈ $580,000** as of early 2026, up modestly on
   2025. `[V]`
-- **Cary Towne Center is the cautionary tale.** Epic Games bought the mall to
+- **Cary Towne Center — one site that stalled.** Not a mark against Cary, which kept growing straight through it. Epic Games bought the mall to
   build a headquarters targeted for 2024. The rezoning application was withdrawn
   for inactivity in December 2024, the site still sat vacant in April 2026, and
   Epic announced roughly 1,000 layoffs in April 2026. `[V]`

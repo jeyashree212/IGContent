@@ -11,13 +11,14 @@
     "#trianglerealestate"
   ],
   "verify": [
-    "SLIDE 5 \u2014 'more than doubled between 2016 and 2024' is generalized from the real numbers you gave me. Confirm you are comfortable publishing it at all: it is one property, it reads as a performance claim, and the exact figures are public record to anyone who looks it up.",
-    "SLIDE 4 \u2014 add the actual international grocers and shops you would name. I left the line general on purpose.",
-    "SLIDE 4 \u2014 confirm the West Cary price framing. I wrote 'the kind of money that used to buy in three towns' rather than naming a number.",
+    "SLIDE 5 \u2014 'more than doubled since 2016' is generalized from the real numbers you gave me. Confirm you are comfortable publishing it at all: it is one property, it reads as a performance claim, and the figures are public record to anyone who looks.",
+    "SLIDE 5 \u2014 the house number 349 is legible in this photo. Say the word and I will blur it.",
+    "SLIDE 4 \u2014 add the actual international grocers and shops you would name. I left it general on purpose.",
     "SLIDE 6 \u2014 the three checks are drafted from what you said. Replace any that is not what you actually tell people.",
     "Confirm 'my family' is how you want it framed, with no further detail.",
-    "SCHOOLS: deliberately omitted. See my note \u2014 this is a Fair Housing problem, not a style choice.",
-    "Fair Housing pass on the whole thing before posting: growth, roads, businesses and amenities only. Never who a town is for."
+    "SCHOOLS: deliberately omitted. Fair Housing decision, not a style choice \u2014 see my note.",
+    "TONE CHECK: no town is the consolation prize here. West Cary reads as coveted, the move reads as a different fit. Confirm it lands that way to you.",
+    "Fair Housing pass before posting: growth, roads, businesses and amenities only. Never who a town is for."
   ],
   "slides": [
     {
@@ -42,20 +43,20 @@
     },
     {
       "type": "body",
-      "eyebrow": "What actually changed",
-      "title": "West Cary",
+      "eyebrow": "Why it is coveted",
+      "title": "West Cary earned it",
       "bullets": [
         "One or two established neighborhoods, *then dozens*",
-        "New construction now reaching *seven figures*",
+        "New construction reaching *seven figures*, and holding",
         "International grocers, boutiques, *restaurants worth the drive*",
-        "Parks and arts that did not exist *twenty years ago*"
+        "Parks, greenways and arts that *did not exist* here before"
       ]
     },
     {
       "type": "photo",
       "eyebrow": "My own family",
-      "text": "Then my family *made the move*.",
-      "caption": "Out of West Cary, down 55. I was the listing agent on the house they left. It had more than doubled between 2016 and 2024.",
+      "text": "Then my family *chose differently*.",
+      "caption": "Not because West Cary stopped being wonderful. The house they sold had more than doubled since 2016. Different stage of life, twenty minutes down 55.",
       "image": "jeyashree-at-sign.jpg"
     },
     {
@@ -70,7 +71,7 @@
     },
     {
       "type": "cta",
-      "text": "I have talked to dozens of people weighing this exact move. Tell me which end of 55 you are looking at and I will help you find the place that fits.",
+      "text": "Staying in Cary or looking further down 55, both are good calls right now. Tell me which one you are weighing and I will help you find the fit.",
       "button_text": "Send me a DM"
     }
   ]
