@@ -257,6 +257,70 @@ Ranked by how well they suit her, and how hard they'd be for a competitor to cop
 
 ---
 
+## 6. Luxury walkable neighborhoods
+
+The intersection of her two angles, and the reason they are one positioning
+rather than two. **A luxury buyer who also wants to walk is a narrow, specific
+brief, and it is exactly the brief she can serve better than a generalist.**
+Researched August 2026. `[V]` unless marked.
+
+### Downtown Raleigh and inner ring — her specialty
+
+| Neighborhood | The walkable part | Rough range |
+|---|---|---|
+| **Hayes Barton** | Sidewalks, front porches, tree-lined; minutes from downtown. The blue-chip historic address. | High end `[G]` |
+| **Five Points** | A five-way historic intersection with independent storefronts you can walk to; 1920s bungalows beside refined new build. | Varies |
+| **Historic Oakwood / Mordecai** | Walk Scores in the high 60s, tree-lined, historic character without giving up walkability. | Upper $600Ks–$800Ks |
+| **Glenwood South** | Genuinely urban — restaurants, groceries, pharmacy on foot. Condo stock. | Median near $600K |
+| **Boylan Heights / Warehouse District** | The Lynde: 14 floor plans, 1–3 bed, from the $350s. Borders both. | From $350s |
+| **East Side** | **Loft3**, 21 residences, cold-formed-steel, delivering 2026. | New construction |
+
+Other downtown buildings worth knowing by name: The Atrium, Martin Place,
+Yarborough Park, 610 Hillsborough, Ellington Oaks, Barton Place Townhomes,
+Governor's Point, West Lane, Founders Row, Ten at South Person.
+
+**The Raleigh angle no competitor is running:** the **Chavis–Dix Strollway**
+(§3) will connect Chavis to Dix along Lenoir Street. Everything within a walk of
+that route is walkable-luxury *before* the trail exists. Funded and routed,
+construction not started — so this is early information, not a done deal, and
+must be framed that way.
+
+### Cary — luxury and walkable at the same time
+
+| Neighborhood | The walkable part | Rough range |
+|---|---|---|
+| **MacGregor Downs** | Country-club walkability, lake and trails. The top of Cary's market. | ~$600K–$5.3M |
+| **Preston** | Master-planned golf community, trail network built in. Founded in the 1990s by SAS. | High end |
+| **Lochmere** | Two dozen subdivisions around lakes, trails, semi-private golf club. | High end |
+| **Cary Park** | 28-acre lake ringed by two miles of paved trail. | Mid–high |
+| **Amberly** | Direct connection to Panther Creek and White Oak Creek greenways. | Mid–high |
+| **Carpenter Village** | Village layout, greenway access. | Mid–high |
+| **Downtown Cary** | Downtown Cary Park (2023) turned it into arguably the most walkable, most culturally active neighborhood in the Triangle's suburban ring. | Rising |
+
+**The Cary insight:** the golf-and-lake communities and the greenway network are
+usually sold as two different things. They are the same thing — trails,
+walkability, and the top of the price band, in one place. Nobody in her
+competitor set is framing it that way.
+
+### The through-line
+
+Downtown Raleigh sells **urban** walkability: storefronts, restaurants, a
+sidewalk grid. Cary sells **greenway** walkability: trails, lakes, connection to
+the wider network via White Oak Creek to the American Tobacco Trail. Both are
+premium, both are walkable, and they suit different buyers. **Naming that
+distinction is a content series on its own** — and it lets her serve a luxury
+buyer in either place without ever ranking one above the other.
+
+### Still to research
+
+- Holly Springs, Fuquay-Varina and Garner walkability — not yet covered here,
+  and their downtowns are exactly where this angle should extend next.
+- Actual Walk Scores per neighborhood, rather than the one range found.
+- Current price bands: the ranges above are indicative, not comped. **Never
+  publish a price range from this file without checking MLS first.**
+
+---
+
 ## Sources
 
 - [Chavis-Dix Strollway — Raleighnc.gov](https://raleighnc.gov/projects/chavis-dix-strollway)
@@ -281,3 +345,12 @@ Ranked by how well they suit her, and how hard they'd be for a competitor to cop
 - [Cary Towne Center still vacant — WRAL](https://www.wral.com/news/investigates/cary-towne-center-vacant-epic-games-property-april-2026/)
 - [Epic Games rezoning withdrawn — CBS17](https://www.cbs17.com/news/local-news/wake-county-news/epic-games-rezoning-request-for-cary-towne-center-site-withdrawn-due-to-inactivity/)
 - [Wake County transportation and housing project funding — Rep. Ross](https://ross.house.gov/2026/1/house-passes-nearly-7-million-in-funding-for-wake-county-transportation-housing-projects-secured-by-congresswoman-ross)
+- [Parkside Town Commons directory](https://www.parksidetowncommons.com/directory)
+- [36 Western Wake international grocery stores — 5 West Mag](https://www.5westmag.com/expanded-international-grocery-stores/)
+- [White Oak Creek Greenway — Town of Cary](https://www.carync.gov/recreation-enjoyment/parks-greenways-environment/greenways/white-oak-creek-greenway)
+- [Cary neighborhoods with greenway access — Harmony Realty](https://www.harmonyrealtytriangle.com/cary-greenway-homes/)
+- [Best neighborhoods in Cary 2026 — Raleigh Realty](https://raleighrealty.com/blog/best-neighborhoods-cary)
+- [Cary luxury neighborhoods guide — Bespoke Realty](https://bespokerealtygroup.com/blog/luxury-neighborhoods-in-cary-where-move-up-buyers-look-next)
+- [Best neighborhoods in Raleigh: luxury enclaves — DRE Firm](https://drefirm.com/raleigh-neighborhoods)
+- [Comparing Raleigh's most walkable neighborhoods](https://ensemblepropertiesnc.com/blog/comparing-raleighs-most-walkable-neighborhoods-for-buyers)
+- [Downtown Raleigh condo buildings overview — Luxury Movers](https://www.luxurymovers.com/neighborhood/downtown-raleigh)
