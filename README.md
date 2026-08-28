@@ -37,7 +37,11 @@ the agent personally liable for third-party IP infringement).
     brand/                     Brand assets + extracted headshot and skyline
     config/brand.json          Tokens, disclosure, voice, hard rules
     config/competitors.json    Radar cohort
+    knowledge/                 Triangle development research (skills read this)
+    photos/library/            Curated, named photos pulled from Drive
     render/carousel.py         Renderer — IG 1080x1350 + TikTok 1080x1920
+    render/corridor_map.py     NC 55 corridor map, drawn in brand
+    render/contact_sheet.py    Review a folder of photos at a glance
     workspace/<slug>/          One carousel: config.json, images/, ig/, tiktok/
 
 ## Positioning

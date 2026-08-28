@@ -78,6 +78,25 @@ Get granular. "West Cary" beats "Cary". A named road, intersection, or park
 beats a town. If you do not know the specific, **ask her** — do not fill the
 gap with something plausible.
 
+## Local knowledge
+
+**Read `knowledge/triangle-development.md` before writing any content that
+touches a place.** It carries named projects, dates, dollar figures and job
+numbers for all six of her markets, so a slide can cite Complete 540 or the
+Morrisville Town Center instead of saying "the area is growing."
+
+Every claim in it is tagged `[V]` (verified, source listed) or `[G]` (general
+background, verify first). Anything `[G]`, and anything dated within the last
+year, goes in the carousel's `verify` list.
+
+Two rules when using it:
+
+- **A project is never a promise.** "A BRT station is planned two blocks away"
+  is a fact. "This will raise your home value" is a prediction she should not
+  make in a caption.
+- **Date the claim** — "as of August 2026" — so it ages honestly instead of
+  quietly becoming wrong.
+
 ## Hashtags
 
 5–7, never more. At least three hyperlocal to the exact place in the post.
