@@ -1,30 +1,31 @@
 {
   "title": "The Highway 55 corridor",
   "pillar": "reach",
-  "angle": "her own story \u2014 grew up in Cary/Morrisville, family moved down 55, she was the listing agent",
+  "angle": "her own story, backed by named places from knowledge/triangle-development.md",
   "hashtags": [
     "#caryNC",
+    "#morrisvillenc",
     "#hollyspringsnc",
     "#fuquayvarina",
-    "#morrisvillenc",
     "#wakecountync",
     "#trianglerealestate"
   ],
   "verify": [
-    "SLIDE 5 \u2014 'more than doubled since 2016' is generalized from the real numbers you gave me. Confirm you are comfortable publishing it at all: it is one property, it reads as a performance claim, and the figures are public record to anyone who looks.",
-    "SLIDE 5 \u2014 the house number 349 is legible in this photo. Say the word and I will blur it.",
-    "SLIDE 4 \u2014 add the actual international grocers and shops you would name. I left it general on purpose.",
-    "SLIDE 6 \u2014 the three checks are drafted from what you said. Replace any that is not what you actually tell people.",
-    "Confirm 'my family' is how you want it framed, with no further detail.",
-    "SCHOOLS: deliberately omitted. Fair Housing decision, not a style choice \u2014 see my note.",
-    "TONE CHECK: no town is the consolation prize here. West Cary reads as coveted, the move reads as a different fit. Confirm it lands that way to you.",
-    "Fair Housing pass before posting: growth, roads, businesses and amenities only. Never who a town is for."
+    "SLIDE 2 \u2014 Parkside Town Commons sits at I-540 and NC 55 [verified Aug 2026]. Confirm that matches the complex you watched go up from dirt.",
+    "SLIDE 4 \u2014 Complete 540 Phase 1 opened 25 Sept 2024, Apex to Garner, 18 miles [verified].",
+    "SLIDE 5 \u2014 every name here is verified as of Aug 2026, but retail turns over. Spot-check before posting, and swap in the grocers you actually send people to.",
+    "SLIDE 5 \u2014 White Oak Creek Greenway is ~7.5 miles and connects Bond Park to the American Tobacco Trail [verified].",
+    "SLIDE 6 \u2014 'more than doubled since 2016' is generalized from your real numbers. Confirm you want it published at all: one property, reads as a performance claim, figures are public record.",
+    "SLIDE 6 \u2014 reframed so the neighbouring agent's rider is out of shot rather than blurred; your own sign still reads. House number and a person in the doorway are blurred. Check it looks natural.",
+    "Confirm 'my family' framing with no further detail.",
+    "SCHOOLS: still deliberately omitted. Fair Housing decision.",
+    "TONE: no town is a consolation prize. Cary reads as coveted throughout."
   ],
   "slides": [
     {
       "type": "photo",
       "eyebrow": "The 55 corridor",
-      "text": "I watched this whole corridor *get built*.",
+      "text": "I watched this corridor *get built*.",
       "caption": "Rural North Carolina to everything you need, in about the time it takes to grow up here.",
       "image": "west-cary-streetscape.heic"
     },
@@ -32,24 +33,43 @@
       "type": "body",
       "eyebrow": "Where I am from",
       "title": "Cary and Morrisville",
-      "text": "I grew up in both. So when I tell you a neighborhood changed, I am not reading it off a chart. I watched the Parkside complex go from dirt to a thriving shopping center."
+      "text": "I grew up in both. I watched Parkside Town Commons go from dirt to a full shopping center, and it sits right where 55 meets 540. The two roads that made everything else possible."
     },
     {
       "type": "photo",
       "eyebrow": "One road",
-      "text": "*55* connects all of it.",
-      "caption": "Past downtown Cary, out to US 1 and 540. One of the best access points in the Triangle that still has room to grow.",
+      "text": "*55* ties it all together.",
+      "caption": "Morrisville down through Cary and Apex to Holly Springs and Fuquay-Varina, meeting US 1 and 540 on the way.",
       "image": "corridor-map.png"
     },
     {
-      "type": "body",
+      "type": "stat",
+      "eyebrow": "September 2024",
+      "stat": "540",
+      "title": "Eighteen new miles",
+      "text": "Complete 540 opened from the NC 55 bypass in Apex to I-40 in Garner. The last stretch to Knightdale closes the loop in 2028. The road always comes first."
+    },
+    {
+      "type": "index",
       "eyebrow": "Why it is coveted",
-      "title": "West Cary earned it",
-      "bullets": [
-        "One or two established neighborhoods, *then dozens*",
-        "New construction reaching *seven figures*, and holding",
-        "International grocers, boutiques, *restaurants worth the drive*",
-        "Parks, greenways and arts that *did not exist* here before"
+      "title": "West Cary now",
+      "entries": [
+        {
+          "name": "Parkside Town Commons",
+          "detail": "Target, Harris Teeter, Hobby Lobby and a row of restaurants, right at *55 and 540*"
+        },
+        {
+          "name": "Grand Asia, Patel Brothers, H Mart",
+          "detail": "Three international grocers minutes apart, with a dozen more across Morrisville"
+        },
+        {
+          "name": "White Oak Creek Greenway",
+          "detail": "*7.5 miles* linking Bond Park to the American Tobacco Trail"
+        },
+        {
+          "name": "Amberly, Carpenter Village, Cary Park",
+          "detail": "Greenway access built into the neighborhood, not bolted on later"
+        }
       ]
     },
     {
@@ -57,7 +77,11 @@
       "eyebrow": "My own family",
       "text": "Then my family *chose differently*.",
       "caption": "Not because West Cary stopped being wonderful. The house they sold had more than doubled since 2016. Different stage of life, twenty minutes down 55.",
-      "image": "jeyashree-at-sign.jpg"
+      "image": "jeyashree-at-sign.jpg",
+      "frame": {
+        "zoom": 1.0,
+        "x": 0.36
+      }
     },
     {
       "type": "body",

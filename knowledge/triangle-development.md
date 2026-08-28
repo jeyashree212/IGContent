@@ -72,6 +72,30 @@ but not built* matters more than what is standing today.
   cited gap. `[V]`
 - **Cary median home price ≈ $580,000** as of early 2026, up modestly on
   2025. `[V]`
+
+**West Cary specifics — named, for content.** `[V]`
+
+- **Parkside Town Commons**, 7119 O'Kelly Chapel Road — sits at **I-540 and
+  NC 55**, the exact intersection of the two roads in her corridor story, and
+  the complex she watched go up from dirt. Target, Harris Teeter, Hobby Lobby,
+  Field & Stream, Golf Galaxy, Starbucks; Brixx, Hickory Tavern, Five Guys.
+- **International grocers.** Patel Brothers (802 E Chatham St, Cary), H Mart
+  (Cary, opened 2016), Grand Asia (Cary). Across Morrisville: Grand India Mart
+  (3516 Davis Dr), Suvidha Indo-Pak (3735 Davis Dr), RTP Sabzi Mandi (1004
+  Lower Shiloh Way), Sangam Mart (10300 Chapel Hill Rd). Roughly 36 international
+  grocers across western Wake.
+  **Name the businesses — never characterise who shops there.** The stores are
+  an amenity fact; the shoppers are not content.
+- **White Oak Creek Greenway** — about **7.5 miles**, connecting **Fred G. Bond
+  Metro Park** to the **American Tobacco Trail**. Panther Creek Greenway runs
+  from Carpenter Fire Station Road to Cary Park Lake; Park Village Greenway
+  links the Park Village Community Center into White Oak Creek.
+- **Neighborhoods with greenway access built in:** Amberly (connects via Panther
+  Creek and White Oak Creek), Carpenter Village, Cary Park (28-acre lake, two
+  miles of paved trail), plus Preston, Lochmere and MacGregor Downs.
+- **This is the bridge between her two angles.** West Cary is simultaneously her
+  luxury market and a genuinely walkable, greenway-connected one. Content that
+  ties the two together is hers alone.
 - **Cary Towne Center — one site that stalled.** Not a mark against Cary, which kept growing straight through it. Epic Games bought the mall to
   build a headquarters targeted for 2024. The rezoning application was withdrawn
   for inactivity in December 2024, the site still sat vacant in April 2026, and

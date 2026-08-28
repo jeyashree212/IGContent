@@ -40,7 +40,13 @@ One config file in, branded PNGs out at both aspect ratios. The look lives in
       "text": "One idea.", "bullets": ["max four", "each one line"],
       "image": "listing-front.jpg" },
     { "type": "photo", "eyebrow": "Label", "text": "Type over the photo.",
-      "caption": "Optional supporting line.", "image": "cary-downtown.heic" },
+      "caption": "Optional supporting line.", "image": "cary-downtown.heic",
+      "frame": { "zoom": 1.0, "x": 0.36 } },
+    { "type": "index", "eyebrow": "Label", "title": "Named places",
+      "entries": [ { "name": "Parkside Town Commons",
+                     "detail": "What it is, in one line" } ] },
+    { "type": "split", "eyebrow": "Label", "title": "Headline",
+      "text": "Body copy in the brick panel.", "image": "street.jpg" },
     { "type": "stat", "eyebrow": "Label", "stat": "55",
       "title": "Short title", "text": "What the number means." },
     { "type": "cta", "text": "The ask.", "button_text": "Follow for more" }
@@ -53,7 +59,21 @@ One config file in, branded PNGs out at both aspect ratios. The look lives in
   Use it for real city photos. Falls back to `body` if the image is missing.
 - **`stat`** sets one number huge in brick with the corner wedge. Use it for a
   road number, a year, a distance — something concrete and checkable.
-- Vary the types. A carousel of nothing but `body` slides reads flat.
+- **`index`** is a directory: up to five named places, each with a one-line
+  detail, hairline-separated. **Reach for this instead of `bullets` whenever
+  the slide is a list of real places** — it is denser, more editorial, and it
+  forces specificity.
+- **`split`** puts a photo across the top with the copy in a brick panel
+  overlapping its lower edge. Good for one strong statement over one image.
+- **Vary the types.** Three `body` slides in a row is the single fastest way to
+  make a carousel look machine-made. Aim for no two adjacent slides sharing a
+  layout, and put a `photo`, `stat` or `index` between every pair of `body`
+  slides.
+- **`frame`** on a photo slide controls composition: `zoom` tightens, `x`/`y`
+  pan (0 = left/top, 1 = right/bottom). Use it to compose something **out of
+  frame** rather than blurring it — a blur reads as censorship, a crop reads as
+  a choice. Blur only genuine privacy items: house numbers, faces of people who
+  did not consent.
 - `*asterisks*` colour a phrase brick. One or two per slide, never more.
 - `image`: a filename in `workspace/<slug>/images/`, or `brand:<file>` for a
   shared asset in `brand/`. A missing image degrades to the blush ground.

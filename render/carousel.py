@@ -73,6 +73,10 @@ def load_fonts():
         return f
 
     return {
+        "entry":       pf(50, "Bold"),
+        "entry_sm":    pf(42, "Bold"),
+        "detail":      ss(32, "Regular"),
+        "tag":         ss(23, "SemiBold"),
         "stat":        pf(210, "Bold"),
         "stat_sm":     pf(150, "Bold"),
         "over":        pf(92, "Bold"),
@@ -238,11 +242,15 @@ def corner_wedge(img, C, size=250):
     return Image.alpha_composite(img.convert("RGBA"), layer).convert("RGB")
 
 
-def cover_fit(img, w, h):
-    ratio = max(w / img.width, h / img.height)
+def cover_fit(img, w, h, zoom=1.0, fx=0.5, fy=0.5):
+    """
+    Scale-and-crop to fill. `zoom` tightens the frame, `fx`/`fy` pan it — so a
+    shot can be composed to leave something out of frame rather than blurred.
+    """
+    ratio = max(w / img.width, h / img.height) * max(1.0, zoom)
     img = img.resize((int(img.width * ratio) + 1, int(img.height * ratio) + 1), Image.LANCZOS)
-    left = (img.width - w) // 2
-    top = (img.height - h) // 2
+    left = int((img.width - w) * min(max(fx, 0.0), 1.0))
+    top = int((img.height - h) * min(max(fy, 0.0), 1.0))
     return img.crop((left, top, left + w, top + h))
 
 
@@ -491,7 +499,10 @@ def render_photo(cfg, slide, F, C, brand, dims, carousel_dir, index, total):
     if not src:
         return render_body(cfg, slide, F, C, brand, dims, carousel_dir, index, total)
 
-    img = scrim(cover_fit(open_photo(src), W, H), strength=0.9, start=0.28)
+    fr = slide.get("frame", {})
+    img = scrim(cover_fit(open_photo(src), W, H, fr.get("zoom", 1.0),
+                          fr.get("x", 0.5), fr.get("y", 0.5)),
+                strength=0.9, start=0.28)
     draw = ImageDraw.Draw(img)
     content_w = W - MARGIN * 2
 
@@ -570,8 +581,100 @@ def render_stat(cfg, slide, F, C, brand, dims, carousel_dir, index, total):
     return img
 
 
+def render_index(cfg, slide, F, C, brand, dims, carousel_dir, index, total):
+    """
+    A directory of named places: name in display type, detail beneath, hairline
+    between. Dense and editorial — the antidote to a slide of four bullets.
+    """
+    W, H = dims
+    img = new_slide(W, H, C)
+    draw = ImageDraw.Draw(img)
+    content_w = W - MARGIN * 2
+    entries = slide["entries"]
+    brick, black = hex_to_rgb(C["brick"]), hex_to_rgb(C["black"])
+
+    y = MARGIN + 34
+    if slide.get("eyebrow"):
+        draw.text((MARGIN, y), slide["eyebrow"].upper(), font=F["eyebrow"], fill=brick)
+        y += 50
+    if slide.get("title"):
+        tf = F["title"] if draw.textlength(slide["title"], font=F["title"]) <= content_w else F["title_sm"]
+        draw.text((MARGIN, y), slide["title"], font=tf, fill=black)
+        y += line_height(tf, 1.02)
+        draw_swash(draw, MARGIN, y + 12, 172, brick, scale=0.8)
+        y += 60
+
+    # distribute the remaining height across the entries
+    bottom = H - FOOTER_H - 24
+    ef = F["entry"] if len(entries) <= 4 else F["entry_sm"]
+    blocks = []
+    for e in entries:
+        h = line_height(ef, 1.06)
+        if e.get("detail"):
+            h += measure(draw, e["detail"], F["detail"], content_w - 78, 1.26) + 8
+        blocks.append(h)
+    gap = max(20, min(44, (bottom - y - sum(blocks)) // max(1, len(entries))))
+
+    for i, (e, bh) in enumerate(zip(entries, blocks)):
+        if i:
+            draw.line([(MARGIN, y - gap // 2), (W - MARGIN, y - gap // 2)],
+                      fill=hex_to_rgb("#C9AE9C"), width=2)
+        # brick index marker, small and square — not a numbered list
+        draw.rectangle([(MARGIN, y + 16), (MARGIN + 16, y + 32)], fill=brick)
+        tx = MARGIN + 46
+        draw.text((tx, y), e["name"], font=ef, fill=black)
+        yy = y + line_height(ef, 1.06)
+        if e.get("detail"):
+            lines = wrap_accented(draw, e["detail"], F["detail"], content_w - 78)
+            yy = draw_accented(draw, lines, (tx, yy + 4), F["detail"],
+                               hex_to_rgb("#5C4A40"), brick, factor=1.26)
+        y = yy + gap
+
+    draw_footer(img, draw, F, C, brand, W, H, index, total)
+    return img
+
+
+def render_split(cfg, slide, F, C, brand, dims, carousel_dir, index, total):
+    """Photo across the top, text in a brick panel that overlaps its lower edge."""
+    W, H = dims
+    img = new_slide(W, H, C)
+    src = resolve_image(slide.get("image"), carousel_dir)
+    band = int(H * 0.56)
+    if src:
+        img.paste(cover_fit(open_photo(src), W, band), (0, 0))
+    draw = ImageDraw.Draw(img)
+    content_w = W - MARGIN * 2 - 56
+
+    tf = F["title"]
+    tl = wrap_accented(draw, slide["title"], tf, content_w)
+    if len(tl) > 2:
+        tf = F["title_sm"]
+        tl = wrap_accented(draw, slide["title"], tf, content_w)
+    body_h = measure(draw, slide["text"], F["body"], content_w, 1.30) if slide.get("text") else 0
+    panel_h = 64 + len(tl) * line_height(tf, 1.06) + 24 + body_h + 56
+
+    px, py = MARGIN - 28, band - 74
+    draw.rectangle([(px, py), (W - px, py + panel_h)], fill=hex_to_rgb(C["brick"]))
+
+    y = py + 46
+    if slide.get("eyebrow"):
+        draw.text((px + 44, y - 4), slide["eyebrow"].upper(), font=F["eyebrow"],
+                  fill=hex_to_rgb("#E9C3B4"))
+        y += 46
+    y = draw_accented(draw, tl, (px + 44, y), tf,
+                      hex_to_rgb("#FFFFFF"), hex_to_rgb("#F0BCAC"), factor=1.06)
+    if slide.get("text"):
+        lines = wrap_accented(draw, slide["text"], F["body"], content_w)
+        draw_accented(draw, lines, (px + 44, y + 20), F["body"],
+                      hex_to_rgb("#EFD9CE"), hex_to_rgb("#F0BCAC"), factor=1.30)
+
+    draw_footer(img, draw, F, C, brand, W, H, index, total)
+    return img
+
+
 RENDERERS = {"hook": render_hook, "body": render_body, "cta": render_cta,
-             "photo": render_photo, "stat": render_stat}
+             "photo": render_photo, "stat": render_stat,
+             "index": render_index, "split": render_split}
 
 
 # --------------------------------------------------------------------------
@@ -592,6 +695,12 @@ def validate(cfg):
     for i, s in enumerate(slides, 1):
         if s.get("type") not in RENDERERS:
             errs.append(f"slide {i}: unknown type {s.get('type')!r}")
+        if s.get("type") == "index" and not s.get("entries"):
+            errs.append(f"slide {i}: type 'index' needs an \"entries\" list")
+        if s.get("type") == "index" and len(s.get("entries", [])) > 5:
+            errs.append(f"slide {i}: {len(s['entries'])} entries, max 5")
+        if s.get("type") == "split" and not s.get("title"):
+            errs.append(f"slide {i}: type 'split' needs a title")
         if s.get("type") == "stat" and not s.get("stat"):
             errs.append(f"slide {i}: type 'stat' needs a \"stat\" value")
         if s.get("type") == "photo" and not s.get("image"):
