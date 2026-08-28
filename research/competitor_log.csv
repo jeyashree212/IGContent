@@ -1,7 +1,7 @@
-creator,date,format,topic,likes,comments,hook,url,notes
-gretchencoleygroup,2026-08-20,reel,market update,412,38,"Three things buyers get wrong about inventory",,example row - replace
-gretchencoleygroup,2026-08-14,carousel,neighborhood,180,9,"Inside Preston",,example row - replace
-gretchencoleygroup,2026-08-08,photo,listing,143,6,"Just listed in Cary",,example row - replace
-briedimino,2026-08-19,reel,day in the life,890,74,"What I actually do on closing day",,example row - replace
-briedimino,2026-08-12,carousel,how-to,210,15,"How to read a seller disclosure",,example row - replace
-briedimino,2026-08-05,reel,neighborhood,205,11,"Walking downtown Apex",,example row - replace
+creator,date,format,topic,hook_type,hook,has_face,likes,comments,url,notes
+gretchencoleygroup,2026-08-20,reel,market update,,Three things buyers get wrong about inventory,,412,38,,example row - replace
+gretchencoleygroup,2026-08-14,carousel,neighborhood,,Inside Preston,,180,9,,example row - replace
+gretchencoleygroup,2026-08-08,photo,listing,,Just listed in Cary,,143,6,,example row - replace
+briedimino,2026-08-19,reel,day in the life,,What I actually do on closing day,,890,74,,example row - replace
+briedimino,2026-08-12,carousel,how-to,,How to read a seller disclosure,,210,15,,example row - replace
+briedimino,2026-08-05,reel,neighborhood,,Walking downtown Apex,,205,11,,example row - replace

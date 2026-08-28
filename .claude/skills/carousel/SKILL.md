@@ -98,6 +98,25 @@ Get granular. "West Cary" beats "Cary". A named road, intersection, or park
 beats a town. If you do not know the specific, **ask her** — do not fill the
 gap with something plausible.
 
+## Evidence before taste
+
+**Read `knowledge/content-evidence.md` first.** It records what is actually
+known about what performs on this account versus what is still assumed — and
+right now almost all of it is assumed.
+
+Two rules follow:
+
+1. **Label assumptions in the `verify` list.** If a choice rests on something in
+   that file's assumed table — photo openers, slide count, hook style, layout
+   variety — say so. "I opened on a photo because I think it holds attention" is
+   honest. "Photo openers perform better" is not, until `research/what-works.md`
+   says so.
+2. **Do not mass-produce an unvalidated format.** One carousel in a new shape is
+   a hypothesis. Eight of them before anything is measured is a bet.
+
+When `research/what-works.md` exists and has 12+ posts behind it, read it and
+prefer what it says over anything in this file.
+
 ## Local knowledge
 
 **Read `knowledge/triangle-development.md` before writing any content that

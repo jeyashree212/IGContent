@@ -48,6 +48,8 @@ the agent personally liable for third-party IP infringement).
     render/corridor_map.py     NC 55 corridor map, drawn in brand
     render/contact_sheet.py    Review a folder of photos at a glance
     research/radar.py          Competitor scoring — manual log now, API later
+    research/learn.py          What works on her own account (needs her data)
+    knowledge/content-evidence.md  What is known vs assumed. Read before writing.
     docs/meta-api-setup.md     Token walkthrough (blocked)
     docs/facebook-appeal.md    Unblocking the Facebook account
     workspace/<slug>/          One carousel: config.json, images/, ig/, tiktok/
