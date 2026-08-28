@@ -66,29 +66,37 @@ copied eight more times before anything is measured.
 
 Three sources, in order of how much they are worth.
 
-### 1. Her own posting history — by far the most valuable
+### 1. Her own posting history — currently zero
 
-Only she can see reach, saves, shares and follows-from-post. Those are the
-signals that matter, and no API or scraper exposes them for anyone else.
+**@truehomes.realty has no posts.** So there is nothing to learn from yet, and
+`research/own_posts.csv` and `research/learn.py` are scaffolding waiting for a
+first month of posting rather than a source we can use now.
 
-**Instagram → Professional Dashboard → Content you shared.** Sort by reach, then
-by saves. Log into `research/own_posts.csv`, then run `research/learn.py`.
+Two consequences worth being clear about:
 
-Log the losers as well as the winners. A file of only top posts cannot tell you
-what separates them.
+- **Competitors are the only evidence available.** Not the best source, the
+  only one.
+- **The blocked Meta token costs almost nothing right now.** It would return her
+  own insights, and there are none; and accounts under 100 followers get empty
+  insights anyway. Resolve the Facebook account when convenient, not urgently.
 
-**Twelve posts is the floor** before any pattern is worth acting on. Thirty is
-where it gets genuinely useful.
+Start logging from her first post. Twelve is the floor before any pattern is
+worth acting on; thirty is where it gets genuinely useful. Log the weak posts
+too — a file of only winners cannot show what separates them.
 
-### 2. Competitors in her market
+### 2. Competitors in her market — the only source today
 
-`research/competitor_log.csv` and `research/radar.py`. Scores each post against
-its own creator's median, so it detects formats rather than account size.
-Currently manual — the Meta token that would automate it is blocked behind a
-disabled Facebook account.
+`research/competitor_log.csv` and `research/radar.py`, fed by screenshots via
+the `swipe-file` skill. Scores each post against its own creator's median, so it
+detects formats rather than account size.
 
-Engagement only. Instagram does not expose view counts on other people's posts
-to anyone outside the account, at any price we are paying.
+**Screenshots beat the API here.** The Instagram app shows view counts on reel
+tiles in a profile grid; `business_discovery` does not return those for other
+accounts at all. Her scrolling captures more than the token would.
+
+The limits are still real: a screenshot is one moment rather than a trend, and
+this is other people's audiences rather than hers. It tells us which formats and
+topics earn attention in this market. It cannot tell us what converts for her.
 
 ### 3. Published benchmarks
 
