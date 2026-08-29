@@ -22,15 +22,16 @@ Town list on screen is as she wants it — settled, do not re-raise.
 
 ## Option A — recommended
 
-Pays off the loop the video opens, then earns the follow with specifics. No town
-list — the video already does that, and repeating it wastes the space.
+She was only away a few years and **does** recognize the Triangle — so the hook
+is continuity, not return. She never stopped watching it change, which is a
+stronger claim than coming back to something unfamiliar.
 
 ```
-I grew up here, left, and came back to a Triangle I didn't recognize.
+Cary and Morrisville raised me. I left for a few years. I've been watching this
+place change ever since.
 
-Cary and Morrisville raised me. I watched Parkside go up from dirt. I live in
-downtown Raleigh now, so when I tell you a neighborhood changed, I was here for
-it.
+I watched Parkside go up from dirt. I live in downtown Raleigh now. So when I say
+a neighborhood changed, I mean I saw it happen.
 
 What I'm best at is the part the listing skips. Which greenway actually connects
 to something. Which street is quiet on a Tuesday and loud on a Saturday. What's
@@ -41,38 +42,33 @@ Tell me which town you're in and what you want to see first.
 True Homes Realty · Brokered by eXp Realty
 ```
 
+## Option B — shorter
+
+```
+Cary and Morrisville raised me, and I've watched this place change ever since.
+
+I live in downtown Raleigh now. I know which greenway connects to what, and which
+street is quiet on a Tuesday.
+
+Tell me which town you're in and what you want to see first.
+
+True Homes Realty · Brokered by eXp Realty
+```
+
 ### Blanks only she can fill
 
-Each of these would make it noticeably stronger, and I will not invent any of
-them:
+Each would make it stronger, and none will be invented:
 
-- **Where she went when she left.** The video raises it; naming it lands it.
+- **Where she went for those few years**, if she wants it named.
 - **How long she has been licensed**, or what she did before real estate.
 - **One number** — homes closed, families helped, years in the market.
 - **Why she came back.** The most human line available and entirely hers.
 
-## Option B — shortest, if A feels long
+### Do not write
 
-```
-I left the Triangle. I came back to one I didn't recognize.
-
-Tell me which town you're in and I'll show you what's changing there.
-
-True Homes Realty · Brokered by eXp Realty
-```
-
-## Option C — the promise, tightened
-
-```
-Most agents will tell you a neighborhood is great. I'll tell you what time to
-drive it.
-
-Grew up in Cary and Morrisville. Live in downtown Raleigh now.
-
-Which town are you curious about?
-
-True Homes Realty · Brokered by eXp Realty
-```
+- "Came back to a place I didn't recognize" — **false.** She was gone a few
+  years and knows the area continuously. Her advantage is that she never lost
+  the thread, not that she rediscovered it.
 
 ## Hashtags
 
