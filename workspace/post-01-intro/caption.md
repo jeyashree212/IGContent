@@ -22,19 +22,36 @@ Town list on screen is as she wants it — settled, do not re-raise.
 
 ## Option A — recommended
 
-Pays off the loop the video opens, then asks something easy to answer.
+Pays off the loop the video opens, then earns the follow with specifics. No town
+list — the video already does that, and repeating it wastes the space.
 
 ```
 I grew up here, left, and came back to a Triangle I didn't recognize.
 
-Now I help people find their way around it.
+Cary and Morrisville raised me. I watched Parkside go up from dirt. I live in
+downtown Raleigh now, so when I tell you a neighborhood changed, I was here for
+it.
+
+What I'm best at is the part the listing skips. Which greenway actually connects
+to something. Which street is quiet on a Tuesday and loud on a Saturday. What's
+approved but not built yet.
 
 Tell me which town you're in and what you want to see first.
 
 True Homes Realty · Brokered by eXp Realty
 ```
 
-## Option B — shortest
+### Blanks only she can fill
+
+Each of these would make it noticeably stronger, and I will not invent any of
+them:
+
+- **Where she went when she left.** The video raises it; naming it lands it.
+- **How long she has been licensed**, or what she did before real estate.
+- **One number** — homes closed, families helped, years in the market.
+- **Why she came back.** The most human line available and entirely hers.
+
+## Option B — shortest, if A feels long
 
 ```
 I left the Triangle. I came back to one I didn't recognize.
