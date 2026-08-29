@@ -70,30 +70,31 @@
   "voice": {
     "emoji": "Sparingly, and warmly. She uses \ud83d\udc4b\ud83c\udffe in a greeting. One per post at most, never as bullets or decoration. The earlier 'basically never' reading was stricter than she actually writes.",
     "hashtags": {
-      "count": "5-7. Never more.",
-      "rule": "At least three must be hyperlocal to the exact place in the post. Skip mega-tags entirely \u2014 #realestate, #realtor, #dreamhome, #homesweethome sit on 50M+ posts and return nothing but bot follows.",
+      "count": "3-5. Not 5-7 \u2014 corrected August 2026.",
+      "why_fewer": "Mosseri confirmed in a July 2026 Q&A that hashtags do not affect reach, and Instagram removed hashtag following in December 2024. They are a categorisation signal that tells the algorithm what a post is about, not a distribution lever. A wall of tags adds noise without adding reach.",
+      "rule": "At least two hyperlocal to the exact place in the post. Never mega-tags \u2014 #realestate, #realtor, #dreamhome sit on 50M+ posts and return bot follows.",
+      "what_matters_more": [
+        "The PROFILE NAME field \u2014 Instagram indexes it in search, and it is not the @handle. 'Jeyashree Haridoss | Raleigh + Cary Realtor' is worth more than any tag she will ever use.",
+        "Searchable keywords in the caption itself. Instagram has real keyword search now, so the words 'Cary realtor' written plainly beat #caryrealtor.",
+        "Saves, shares and watch time. These are the actual distribution signals."
+      ],
       "pool": {
         "cary": [
           "#caryNC",
-          "#downtowncary",
-          "#caryrealestate"
+          "#downtowncary"
         ],
         "morrisville": [
-          "#morrisvillenc",
-          "#morrisvillerealestate"
+          "#morrisvillenc"
         ],
         "raleigh": [
           "#downtownraleigh",
-          "#raleighNC",
-          "#raleighrealestate"
+          "#raleighNC"
         ],
         "holly_springs": [
-          "#hollyspringsnc",
-          "#hollyspringsrealestate"
+          "#hollyspringsnc"
         ],
         "fuquay_varina": [
-          "#fuquayvarina",
-          "#fuquayvarinanc"
+          "#fuquayvarina"
         ],
         "garner": [
           "#garnernc"
@@ -101,11 +102,9 @@
         "regional": [
           "#trianglenc",
           "#wakecountync",
-          "#trianglerealestate",
-          "#919"
+          "#trianglerealestate"
         ]
-      },
-      "note": "This set is reasoned, not measured \u2014 nobody can see conversion by tag from outside. Once the post tracker has run a few weeks, compare reach on posts by tag set and cut what does nothing."
+      }
     },
     "tone": "Short complete sentences, one idea each. Specific over vague. No hype words.",
     "pillars": {

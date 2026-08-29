@@ -153,11 +153,21 @@ steering.
 
 ## Hashtags
 
-5–7, never more. At least three hyperlocal to the exact place in the post.
-Pull from the pool in `config/brand.json`. Skip #realestate, #realtor,
-#dreamhome and anything else sitting on 50M+ posts — they return bot follows,
-not buyers. The pool is reasoned, not measured; the post tracker settles it
-once it has a few weeks of data.
+**3–5, and they do not drive reach.** Mosseri confirmed in July 2026 that
+hashtags have no direct effect on reach; hashtag following was removed in
+December 2024. They tell the algorithm what a post is about — that is all.
+
+At least two hyperlocal to the exact place in the post. Never #realestate,
+#realtor or #dreamhome. Pool is in `config/brand.json`.
+
+**Spend the effort here instead**, in order:
+
+1. **The profile Name field** — Instagram indexes it in search, and it is
+   separate from the @handle. `Jeyashree Haridoss | Raleigh + Cary Realtor`
+   outperforms every hashtag she will ever write.
+2. **Plain keywords in the caption.** Instagram has real keyword search now, so
+   writing "Cary realtor" in a sentence beats tagging #caryrealtor.
+3. **Saves, shares and watch time** — the actual distribution signals.
 
 ## Voice
 
