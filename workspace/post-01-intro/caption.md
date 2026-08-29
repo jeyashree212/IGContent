@@ -27,11 +27,11 @@ is continuity, not return. She never stopped watching it change, which is a
 stronger claim than coming back to something unfamiliar.
 
 ```
-Cary and Morrisville raised me. I left for a few years. I've been watching this
-place change ever since.
+Cary and Morrisville raised me. NC State kept me in Raleigh.
 
-I watched Parkside go up from dirt. I live in downtown Raleigh now. So when I say
-a neighborhood changed, I mean I saw it happen.
+I left for a few years and never stopped watching this place change. I watched
+Parkside go up from dirt. I live downtown now, so when I say a neighborhood
+changed, I mean I saw it happen.
 
 What I'm best at is the part the listing skips. Which greenway actually connects
 to something. Which street is quiet on a Tuesday and loud on a Saturday. What's
@@ -45,10 +45,10 @@ True Homes Realty · Brokered by eXp Realty
 ## Option B — shorter
 
 ```
-Cary and Morrisville raised me, and I've watched this place change ever since.
+Cary and Morrisville raised me. NC State kept me in Raleigh.
 
-I live in downtown Raleigh now. I know which greenway connects to what, and which
-street is quiet on a Tuesday.
+I live downtown now. I know which greenway connects to what, and which street is
+quiet on a Tuesday.
 
 Tell me which town you're in and what you want to see first.
 
@@ -60,6 +60,7 @@ True Homes Realty · Brokered by eXp Realty
 Each would make it stronger, and none will be invented:
 
 - **Where she went for those few years**, if she wants it named.
+- **Graduation year / major at NC State**, if she wants the alumni signal sharper.
 - **How long she has been licensed**, or what she did before real estate.
 - **One number** — homes closed, families helped, years in the market.
 - **Why she came back.** The most human line available and entirely hers.
@@ -69,6 +70,16 @@ Each would make it stronger, and none will be invented:
 - "Came back to a place I didn't recognize" — **false.** She was gone a few
   years and knows the area continuously. Her advantage is that she never lost
   the thread, not that she rediscovered it.
+
+## On NC State
+
+The geography arc now reads suburbs to city to away and back: Cary and
+Morrisville, then NC State in Raleigh, then downtown Raleigh today. It also
+explains why she knows Raleigh, which the earlier draft left unaccounted for.
+
+Worth noting beyond the caption: **an alumni network is a real referral source
+for an agent.** Keep it out of the hashtags, though — #ncstate and #wolfpack
+pull a student audience, not a buyer one.
 
 ## Hashtags
 
