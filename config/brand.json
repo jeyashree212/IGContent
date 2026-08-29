@@ -68,7 +68,7 @@
     "no_ai_likeness": "Never generate, suggest, or script a synthetic version of her face or voice. No AI avatars, no voice cloning. Her likeness is her own."
   },
   "voice": {
-    "emoji": "None, unless a single emoji is genuinely elegant in context. Never as bullets or decoration.",
+    "emoji": "Sparingly, and warmly. She uses \ud83d\udc4b\ud83c\udffe in a greeting. One per post at most, never as bullets or decoration. The earlier 'basically never' reading was stricter than she actually writes.",
     "hashtags": {
       "count": "5-7. Never more.",
       "rule": "At least three must be hyperlocal to the exact place in the post. Skip mega-tags entirely \u2014 #realestate, #realtor, #dreamhome, #homesweethome sit on 50M+ posts and return nothing but bot follows.",
@@ -124,6 +124,17 @@
         "better value than X (as a knock on X)"
       ],
       "also_why": "Comparative put-downs of whole areas edge toward steering. Framing each place on its own merits is both better business and safer under Fair Housing."
+    },
+    "register": {
+      "learned_from": "Her own first-post caption, written 2026-08-29 \u2014 the first real voice sample.",
+      "rules": [
+        "Open with warmth, not with a claim. She greets; do not lead with a credential.",
+        "Casual and current: 'the gram', contractions, an exclamation mark is fine.",
+        "Lifestyle sits beside infrastructure. Coffee and greenways in the same breath \u2014 do not write her as purely analytical.",
+        "Generous CTAs. 'I'll share my favorites' beats 'DM me to get started'.",
+        "Self-aware rather than authoritative. She will name an awkward truth and make it disarming instead of hiding it."
+      ],
+      "my_bias_to_correct": "Drafts written for her have run more formal, more infrastructural and more transactional than she is. Warm her up before showing her anything."
     }
   },
   "service_area": {

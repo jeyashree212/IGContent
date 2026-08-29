@@ -9,6 +9,42 @@ more / Welcome to my page.*
 **Because there is no voiceover, the caption carries every word of substance.**
 The video gives atmosphere and a name. It does not say why to follow.
 
+## FINAL — her own words, posted
+
+She wrote this herself. It supersedes every draft below.
+
+```
+Hi there 👋🏾 I'm Jeyashree! I've been an agent for a while but I'm finally getting
+on the gram. Living in downtown Raleigh, I can tell you which greenway connects to
+what, and the best place for a cozy coffee.
+
+Tell me which town you're in and I'll share my favorites.
+
+True Homes Realty · Brokered by eXp Realty
+```
+
+### What her version does that mine did not
+
+Kept as a voice reference. My drafts were consistently more formal and more
+infrastructural than she actually is.
+
+- **Warmth first, credentials second.** She opens with a greeting. Every draft I
+  wrote opened with a claim.
+- **Turns the weakness into charm.** "I've been an agent for a while but I'm
+  finally getting on the gram" disarms the empty account instead of hiding it.
+  I had ignored the zero-posts problem entirely.
+- **Coffee sits beside greenways.** Her local knowledge is lifestyle as well as
+  infrastructure. I wrote roads, approvals and greenways — accurate, but colder
+  than she is.
+- **"I'll share my favorites"** — generous and low-pressure, where my CTAs were
+  transactional.
+- **One emoji, warmly used.** My "no emoji" rule was stricter than she is.
+- She kept the brokerage disclosure without being asked.
+
+---
+
+## Reference drafts (superseded)
+
 ## Fix before posting
 
 1. **No brokerage attribution on screen.** This is advertising by a licensed
